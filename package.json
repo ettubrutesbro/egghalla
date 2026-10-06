@@ -1,0 +1,13 @@
+{
+  "name": "egghalla",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "pull:wikidata": "node scripts/pull-wikidata.mjs",
+    "pull:wnba": "node scripts/pull-wnba.mjs",
+    "build:players": "node scripts/build-players.mjs",
+    "pull": "npm run pull:wikidata && npm run pull:wnba && npm run build:players"
+  }
+}

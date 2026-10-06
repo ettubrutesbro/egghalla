@@ -1,0 +1,140 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=1643453",
+  "retrievedAt": "2026-10-06T03:42:03.728Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "1643453"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 1643453
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            1643453,
+            "Grace",
+            "VanSlooten",
+            "Grace VanSlooten",
+            "VanSlooten, Grace",
+            "G. VanSlooten",
+            "grace-vanslooten",
+            "2004-06-16T00:00:00",
+            "Michigan State",
+            "USA",
+            "Michigan State/USA",
+            "6-3",
+            "",
+            0,
+            "14",
+            "Forward",
+            "Active",
+            "Y",
+            1611661325,
+            "Fever",
+            "IND",
+            "fever",
+            "Indiana",
+            "grace_vanslooten",
+            2026,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2026",
+            "3",
+            "39",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            1643453,
+            "Grace VanSlooten",
+            "2026",
+            1.8,
+            0.2,
+            0.6,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ],
+          [
+            "42026"
+          ]
+        ]
+      }
+    ]
+  }
+}

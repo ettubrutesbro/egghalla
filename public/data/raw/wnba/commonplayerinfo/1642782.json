@@ -1,0 +1,143 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=1642782",
+  "retrievedAt": "2026-10-06T03:40:23.048Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "1642782"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 1642782
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            1642782,
+            "Sarah Ashlee",
+            "Barker",
+            "Sarah Ashlee Barker",
+            "Barker, Sarah Ashlee",
+            "S. Barker",
+            "sarah-ashlee-barker",
+            "2001-09-10T00:00:00",
+            "Alabama",
+            "USA",
+            "Alabama/USA",
+            "6-0",
+            "173",
+            1,
+            "3",
+            "Guard",
+            "Active",
+            "Y",
+            1611661327,
+            "Fire",
+            "PDX",
+            "fire",
+            "Portland",
+            "sarah_ashlee_barker",
+            2025,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2025",
+            "1",
+            "9",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            1642782,
+            "Sarah Ashlee Barker",
+            "2026",
+            10.7,
+            2.4,
+            4.5,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=203400",
+  "retrievedAt": "2026-10-06T03:36:29.312Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "203400"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 203400
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            203400,
+            "Skylar",
+            "Diggins",
+            "Skylar Diggins",
+            "Diggins, Skylar",
+            "S. Diggins",
+            "skylar-diggins",
+            "1990-08-02T00:00:00",
+            "Notre Dame",
+            "USA",
+            "Notre Dame/USA",
+            "5-9",
+            "140",
+            11,
+            "4",
+            "Guard",
+            "Active",
+            "Y",
+            1611661329,
+            "Sky",
+            "CHI",
+            "sky",
+            "Chicago",
+            "skylar_diggins-smith",
+            2013,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2013",
+            "1",
+            "3",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            203400,
+            "Skylar Diggins",
+            "2026",
+            14.2,
+            4.9,
+            3.2,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12013"
+          ],
+          [
+            "22013"
+          ],
+          [
+            "12014"
+          ],
+          [
+            "22014"
+          ],
+          [
+            "32014"
+          ],
+          [
+            "12015"
+          ],
+          [
+            "22015"
+          ],
+          [
+            "22016"
+          ],
+          [
+            "12017"
+          ],
+          [
+            "22017"
+          ],
+          [
+            "32017"
+          ],
+          [
+            "42017"
+          ],
+          [
+            "12018"
+          ],
+          [
+            "22018"
+          ],
+          [
+            "32018"
+          ],
+          [
+            "42018"
+          ],
+          [
+            "22020"
+          ],
+          [
+            "42020"
+          ],
+          [
+            "12021"
+          ],
+          [
+            "22021"
+          ],
+          [
+            "32021"
+          ],
+          [
+            "42021"
+          ],
+          [
+            "12022"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "32022"
+          ],
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "42024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "32025"
+          ],
+          [
+            "42025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ]
+        ]
+      }
+    ]
+  }
+}

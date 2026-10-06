@@ -1,0 +1,876 @@
+{
+  "source": "wikidata-sparql",
+  "url": "https://query.wikidata.org/sparql",
+  "retrievedAt": "2026-10-06T03:30:57.557Z",
+  "params": {
+    "query": "SELECT ?team ?teamLabel ?inception ?dissolved ?location ?locationLabel ?hq ?hqLabel ?venue ?venueLabel WHERE {\n  ?team wdt:P118 wd:Q2593221 ; wdt:P31 ?teamType . ?teamType rdfs:label \"basketball team\"@en .\n  OPTIONAL { ?team wdt:P571 ?inception }\n  OPTIONAL { ?team wdt:P576 ?dissolved }\n  OPTIONAL { ?team wdt:P131 ?location }\n  OPTIONAL { ?team wdt:P159 ?hq }\n  OPTIONAL { ?team wdt:P115 ?venue }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}",
+    "wnbaItem": "Q2593221"
+  },
+  "data": {
+    "head": {
+      "vars": [
+        "team",
+        "teamLabel",
+        "inception",
+        "dissolved",
+        "location",
+        "locationLabel",
+        "hq",
+        "hqLabel",
+        "venue",
+        "venueLabel"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q536458"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "dissolved": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2003-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q37320"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q387157"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Cleveland Rockers"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Cleveland"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rocket Arena"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q974705"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q18419"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q807966"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "New York Liberty"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Brooklyn"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Barclays Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1067358"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "dissolved": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2007-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q16565"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q632138"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Charlotte Sting"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Charlotte"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Charlotte Coliseum"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1126243"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1999-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q7882479"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2056942"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Connecticut Sun"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Uncasville"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mohegan Sun Arena"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1274643"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q16556"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1538690"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Phoenix Mercury"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Phoenix"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mortgage Matchup Center"
+          },
+          "location": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q16556"
+          },
+          "locationLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Phoenix"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1329633"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q65"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q186080"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Los Angeles Sparks"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Los Angeles"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Crypto.com Arena"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1465192"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1998-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q61"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q30488454"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Washington Mystics"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Washington, D.C."
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "CareFirst Arena"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1470412"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2000-01-01T00:00:00Z"
+          },
+          "dissolved": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2002-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6106"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1347442"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Portland Fire"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Portland"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Moda Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1474850"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1998-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q36091"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q282675"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Minnesota Lynx"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Minneapolis"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Target Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1479748"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "dissolved": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2008-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q16555"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2435324"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Houston Comets"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Houston"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Lakewood Church Central Campus"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1541588"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "dissolved": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2009-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q18013"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q93831"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sacramento Monarchs"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sacramento"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ARCO Arena"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1544869"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1999-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q5083"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q977529"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Seattle Storm"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Seattle"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Climate Pledge Arena"
+          },
+          "location": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q5083"
+          },
+          "locationLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Seattle"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1631017"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2000-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6346"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q545007"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Indiana Fever"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Indianapolis"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gainbridge Fieldhouse"
+          },
+          "location": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6346"
+          },
+          "locationLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Indianapolis"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q655386"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2000-01-01T00:00:00Z"
+          },
+          "dissolved": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2002-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q8652"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q420129"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Miami Sol"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Miami"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Kaseya Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q756160"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2007-10-17T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q23556"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q48818019"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Atlanta Dream"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Atlanta"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gateway Center Arena"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q796358"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2006-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1297"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q16991688"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Chicago Sky"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Chicago"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Wintrust Arena"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q21334944"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1998-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q17943"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2982974"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Dallas Wings"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Arlington"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "College Park Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q21334944"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1998-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q17943"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3012439"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Dallas Wings"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Arlington"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Kay Bailey Hutchison Convention Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q42333021"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1997-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q49267"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1888848"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Las Vegas Aces"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Henderson"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Michelob Ultra Arena"
+          },
+          "location": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q23768"
+          },
+          "locationLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Las Vegas"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q125521245"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2023-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q62"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q15262098"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Golden State Valkyries"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "San Francisco"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Chase Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q125879905"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2026-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q172"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q541481"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Toronto Tempo"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Toronto"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Coca-Cola Coliseum"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q130329996"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2024-01-01T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q6106"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1347442"
+          },
+          "teamLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Portland Fire"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Portland"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Moda Center"
+          }
+        },
+        {
+          "team": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q135195444"
+          },
+          "inception": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2025-06-30T00:00:00Z"
+          },
+          "hq": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q37320"
+          },
+          "venue": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q387157"
+          },
+          "teamLabel": {
+            "type": "literal",
+            "value": "Q135195444"
+          },
+          "hqLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Cleveland"
+          },
+          "venueLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rocket Arena"
+          }
+        }
+      ]
+    }
+  }
+}

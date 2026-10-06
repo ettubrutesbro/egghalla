@@ -1,0 +1,95 @@
+{
+  "source": "wikidata-sparql",
+  "url": "https://query.wikidata.org/sparql",
+  "retrievedAt": "2026-10-06T03:31:00.521Z",
+  "params": {
+    "query": "SELECT ?player ?award ?awardLabel ?pointInTime WHERE {\n  VALUES ?player { wd:Q100977795 wd:Q102043028 wd:Q102212623 wd:Q1031752 wd:Q1032247 wd:Q103831237 wd:Q104985490 wd:Q105062312 wd:Q105709929 wd:Q105834672 wd:Q1060867 wd:Q106298476 wd:Q106424817 wd:Q106512805 wd:Q106512895 wd:Q106512897 wd:Q106515412 wd:Q106587773 wd:Q106623070 wd:Q106623152 wd:Q106708040 wd:Q106812045 wd:Q106838172 wd:Q106844373 wd:Q106860659 wd:Q106866476 wd:Q106866493 wd:Q106869466 wd:Q106873495 wd:Q106873526 wd:Q106898737 wd:Q106901309 wd:Q106934982 wd:Q107012615 wd:Q107213686 wd:Q107387819 wd:Q107493640 wd:Q107493673 wd:Q107552893 wd:Q107567861 wd:Q107594966 wd:Q108162788 wd:Q108175240 wd:Q108189269 wd:Q108203260 wd:Q109587550 wd:Q109767826 wd:Q109767988 wd:Q110183553 wd:Q110248346 wd:Q110255140 wd:Q110292138 wd:Q110486187 wd:Q110510329 wd:Q110551618 wd:Q110587267 wd:Q110768864 wd:Q110905460 wd:Q110999027 wd:Q1112239 wd:Q111253638 wd:Q111459120 wd:Q111491054 wd:Q111524064 wd:Q111585258 wd:Q111585573 wd:Q111585576 wd:Q111585582 wd:Q111585585 wd:Q111585587 wd:Q111585588 wd:Q111585593 wd:Q111585594 wd:Q111698612 wd:Q1117278 wd:Q111741115 wd:Q111869858 wd:Q111889716 wd:Q111901998 wd:Q111902432 wd:Q111907493 wd:Q111908764 wd:Q111982243 wd:Q111982248 wd:Q111983529 wd:Q111984667 wd:Q112045766 wd:Q112045775 wd:Q112110342 wd:Q112113356 wd:Q112133692 wd:Q112135178 wd:Q1122563 wd:Q112259380 wd:Q112277890 wd:Q112584123 wd:Q112810862 wd:Q112843440 wd:Q112847 wd:Q113149945 wd:Q11323824 wd:Q113265870 wd:Q113641976 wd:Q114653669 wd:Q114653704 wd:Q114943755 wd:Q1149588 wd:Q1150367 wd:Q115043824 wd:Q115104686 wd:Q1151997 wd:Q115257446 wd:Q115607102 wd:Q11561907 wd:Q115760765 wd:Q11578328 wd:Q1158152 wd:Q115869992 wd:Q115908231 wd:Q115958141 wd:Q115974332 wd:Q116448249 wd:Q116462032 wd:Q116812541 wd:Q116821074 wd:Q116894480 wd:Q117188182 wd:Q117213346 wd:Q117248156 wd:Q117289169 wd:Q117428822 wd:Q117532052 wd:Q117536779 wd:Q118132650 wd:Q118193138 wd:Q118251866 wd:Q11840068 wd:Q118591566 wd:Q118591697 wd:Q118779929 wd:Q118809525 wd:Q118816422 wd:Q119100186 wd:Q119536553 wd:Q119537164 wd:Q119537361 wd:Q119538228 wd:Q119538636 wd:Q119538637 wd:Q119538644 }\n  ?player p:P166 ?st .\n  ?st ps:P166 ?award .\n  ?award rdfs:label ?awardLabel .\n  FILTER(LANG(?awardLabel) = \"en\" && CONTAINS(?awardLabel, \"WNBA\"))\n  OPTIONAL { ?st pq:P585 ?pointInTime }\n}",
+    "wnbaItem": "Q2593221",
+    "batch": 0,
+    "players": 150
+  },
+  "data": {
+    "head": {
+      "vars": [
+        "player",
+        "award",
+        "awardLabel",
+        "pointInTime"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q106298476"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1601876"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Rookie of the Year Award"
+          },
+          "pointInTime": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2024-01-01T00:00:00Z"
+          }
+        },
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1117278"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1601876"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Rookie of the Year Award"
+          }
+        },
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1032247"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q278827"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Most Improved Player Award"
+          },
+          "pointInTime": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2004-01-01T00:00:00Z"
+          }
+        },
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q11323824"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q505825"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Coach of the Year Award"
+          }
+        }
+      ]
+    }
+  }
+}

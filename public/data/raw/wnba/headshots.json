@@ -1,0 +1,69 @@
+{
+  "source": "www.wnba.com player page + cdn HEAD checks",
+  "url": "https://www.wnba.com/player/1642777/monique_akoa_makani",
+  "retrievedAt": "2026-10-06T03:44:03.839Z",
+  "params": {
+    "samplePersonId": 1642777,
+    "bogusId": "999999999"
+  },
+  "data": {
+    "pageStatus": 200,
+    "headshotRefsFound": [
+      "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1642777.png"
+    ],
+    "pattern": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/{personId}.png",
+    "placeholder": {
+      "personId": "999999999",
+      "status": 200,
+      "etag": "\"dab8a90a5529e57031c31e63bcd4b7d0\"",
+      "contentLength": "12531"
+    },
+    "verification": [
+      {
+        "personId": 201886,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/201886.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "258487",
+        "etag": "\"a2f3686c3a2ad198987f996abf4d313a\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1628278,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1628278.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "183099",
+        "etag": "\"e3532aabc7b7e20c5722fd09b42cd8ee\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1630386,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1630386.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "260816",
+        "etag": "\"da02c05f90adb09fdfc836b07cc96774\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1642292,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1642292.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "289375",
+        "etag": "\"827d559d8d8f21a15a39fa2277ee2042\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1642835,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1642835.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "12531",
+        "etag": "\"dab8a90a5529e57031c31e63bcd4b7d0\"",
+        "isPlaceholder": true
+      }
+    ]
+  }
+}

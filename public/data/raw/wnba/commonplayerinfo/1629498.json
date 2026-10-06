@@ -1,0 +1,221 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=1629498",
+  "retrievedAt": "2026-10-06T03:37:53.818Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "1629498"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 1629498
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            1629498,
+            "Jackie",
+            "Young",
+            "Jackie Young",
+            "Young, Jackie",
+            "J. Young",
+            "jackie-young",
+            "1997-09-16T00:00:00",
+            "Notre Dame",
+            "USA",
+            "Notre Dame/USA",
+            "6-0",
+            "165",
+            7,
+            "0",
+            "Guard",
+            "Active",
+            "Y",
+            1611661319,
+            "Aces",
+            "LVA",
+            "aces",
+            "Las Vegas",
+            "jackie_young",
+            2019,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2019",
+            "1",
+            "1",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            1629498,
+            "Jackie Young",
+            "2026",
+            18.9,
+            6.8,
+            4.4,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12019"
+          ],
+          [
+            "22019"
+          ],
+          [
+            "42019"
+          ],
+          [
+            "22020"
+          ],
+          [
+            "42020"
+          ],
+          [
+            "22021"
+          ],
+          [
+            "42021"
+          ],
+          [
+            "12022"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "32022"
+          ],
+          [
+            "42022"
+          ],
+          [
+            "52022"
+          ],
+          [
+            "12023"
+          ],
+          [
+            "22023"
+          ],
+          [
+            "32023"
+          ],
+          [
+            "42023"
+          ],
+          [
+            "52023"
+          ],
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "32024"
+          ],
+          [
+            "42024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "32025"
+          ],
+          [
+            "42025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ],
+          [
+            "32026"
+          ],
+          [
+            "42026"
+          ],
+          [
+            "52026"
+          ]
+        ]
+      }
+    ]
+  }
+}

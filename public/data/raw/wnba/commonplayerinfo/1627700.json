@@ -1,0 +1,152 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=1627700",
+  "retrievedAt": "2026-10-06T03:37:07.123Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "1627700"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 1627700
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            1627700,
+            "Julie",
+            "Allemand",
+            "Julie Allemand",
+            "Allemand, Julie",
+            "J. Allemand",
+            "julie-allemand",
+            "1996-07-07T00:00:00",
+            "Castors Braine",
+            "Belgium",
+            "Castors Braine/Belgium",
+            "5-10",
+            "152",
+            3,
+            "22",
+            "Guard",
+            "Active",
+            "Y",
+            1611661332,
+            "Tempo",
+            "TOR",
+            "tempo",
+            "Toronto",
+            "julie_allemand",
+            2020,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2016",
+            "3",
+            "33",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            1627700,
+            "Julie Allemand",
+            "2026",
+            6,
+            5.5,
+            3.2,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "22020"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "42022"
+          ],
+          [
+            "52022"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ]
+        ]
+      }
+    ]
+  }
+}

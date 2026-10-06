@@ -1,0 +1,218 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=202641",
+  "retrievedAt": "2026-10-06T03:36:06.328Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "202641"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 202641
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            202641,
+            "Sydney",
+            "Colson",
+            "Sydney Colson",
+            "Colson, Sydney",
+            "S. Colson",
+            "sydney-colson",
+            "1989-08-06T00:00:00",
+            "Texas A&M",
+            "USA",
+            "Texas A&M/USA",
+            "5-8",
+            "137",
+            11,
+            "51",
+            "Guard",
+            "Inactive",
+            "N",
+            1611661325,
+            "Fever",
+            "IND",
+            "fever",
+            "Indiana",
+            "sydney_colson",
+            2011,
+            2025,
+            "N",
+            "N",
+            "Y",
+            "2011",
+            "2",
+            "16",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "ALL_STAR_APPEARANCES"
+        ],
+        "rowSet": [
+          [
+            202641,
+            "Sydney Colson",
+            "career",
+            2.8,
+            1.7,
+            0.8,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12011"
+          ],
+          [
+            "22011"
+          ],
+          [
+            "42011"
+          ],
+          [
+            "12012"
+          ],
+          [
+            "12015"
+          ],
+          [
+            "22015"
+          ],
+          [
+            "12016"
+          ],
+          [
+            "22016"
+          ],
+          [
+            "22017"
+          ],
+          [
+            "12018"
+          ],
+          [
+            "22018"
+          ],
+          [
+            "12019"
+          ],
+          [
+            "22019"
+          ],
+          [
+            "42019"
+          ],
+          [
+            "22020"
+          ],
+          [
+            "42020"
+          ],
+          [
+            "12022"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "42022"
+          ],
+          [
+            "12023"
+          ],
+          [
+            "22023"
+          ],
+          [
+            "42023"
+          ],
+          [
+            "52023"
+          ],
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "42024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "52025"
+          ]
+        ]
+      }
+    ]
+  }
+}

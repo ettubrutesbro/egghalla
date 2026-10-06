@@ -1,0 +1,197 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=204296",
+  "retrievedAt": "2026-10-06T03:36:22.373Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "204296"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 204296
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            204296,
+            "Rebecca",
+            "Allen",
+            "Rebecca Allen",
+            "Allen, Rebecca",
+            "R. Allen",
+            "rebecca-allen",
+            "1992-11-06T00:00:00",
+            "Melbourne",
+            "Australia",
+            "Melbourne/Australia",
+            "6-2",
+            "162",
+            10,
+            "9",
+            "Forward-Guard",
+            "Active",
+            "Y",
+            1611661313,
+            "Liberty",
+            "NYL",
+            "liberty",
+            "New York",
+            "rebecca_allen",
+            2015,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "Undrafted",
+            "Undrafted",
+            "Undrafted",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            204296,
+            "Rebecca Allen",
+            "2026",
+            5.8,
+            0.6,
+            2.6,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12015"
+          ],
+          [
+            "22015"
+          ],
+          [
+            "22016"
+          ],
+          [
+            "12017"
+          ],
+          [
+            "22017"
+          ],
+          [
+            "42017"
+          ],
+          [
+            "22018"
+          ],
+          [
+            "12019"
+          ],
+          [
+            "22019"
+          ],
+          [
+            "22021"
+          ],
+          [
+            "42021"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "42022"
+          ],
+          [
+            "12023"
+          ],
+          [
+            "22023"
+          ],
+          [
+            "42023"
+          ],
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "22026"
+          ],
+          [
+            "42026"
+          ]
+        ]
+      }
+    ]
+  }
+}

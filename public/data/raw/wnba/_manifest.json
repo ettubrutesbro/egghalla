@@ -1,0 +1,770 @@
+{
+  "startedAt": "2026-10-06T03:31:50.420Z",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "Referer": "https://www.wnba.com/",
+    "Origin": "https://www.wnba.com",
+    "Accept": "application/json"
+  },
+  "endpoints": [
+    {
+      "endpoint": "commonallplayers",
+      "file": "commonallplayers",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "IsOnlyCurrentSeason": "0"
+      },
+      "ok": true,
+      "rows": {
+        "CommonAllPlayers": 1228
+      },
+      "ms": 413
+    },
+    {
+      "endpoint": "commonteamyears",
+      "file": "commonteamyears",
+      "params": {
+        "LeagueID": "10"
+      },
+      "ok": true,
+      "rows": {
+        "TeamYears": 20
+      },
+      "ms": 782
+    },
+    {
+      "endpoint": "leaguedashplayerstats",
+      "file": "leaguedashplayerstats-2025-base",
+      "params": {
+        "LeagueID": "10",
+        "SeasonType": "Regular Season",
+        "PerMode": "PerGame",
+        "PaceAdjust": "N",
+        "PlusMinus": "N",
+        "Rank": "N",
+        "LastNGames": "0",
+        "Month": "0",
+        "OpponentTeamID": "0",
+        "Period": "0",
+        "TeamID": "0",
+        "DateFrom": "",
+        "DateTo": "",
+        "GameSegment": "",
+        "Location": "",
+        "Outcome": "",
+        "SeasonSegment": "",
+        "VsConference": "",
+        "VsDivision": "",
+        "PORound": "0",
+        "PlayerExperience": "",
+        "PlayerPosition": "",
+        "StarterBench": "",
+        "GameScope": "",
+        "ShotClockRange": "",
+        "Conference": "",
+        "Division": "",
+        "College": "",
+        "Country": "",
+        "DraftPick": "",
+        "DraftYear": "",
+        "Height": "",
+        "Weight": "",
+        "TwoWay": "0",
+        "ISTRound": "",
+        "Season": "2025",
+        "MeasureType": "Base"
+      },
+      "ok": true,
+      "rows": {
+        "LeagueDashPlayerStats": 182
+      },
+      "ms": 1858
+    },
+    {
+      "endpoint": "leaguedashplayerstats",
+      "file": "leaguedashplayerstats-2025-advanced",
+      "params": {
+        "LeagueID": "10",
+        "SeasonType": "Regular Season",
+        "PerMode": "PerGame",
+        "PaceAdjust": "N",
+        "PlusMinus": "N",
+        "Rank": "N",
+        "LastNGames": "0",
+        "Month": "0",
+        "OpponentTeamID": "0",
+        "Period": "0",
+        "TeamID": "0",
+        "DateFrom": "",
+        "DateTo": "",
+        "GameSegment": "",
+        "Location": "",
+        "Outcome": "",
+        "SeasonSegment": "",
+        "VsConference": "",
+        "VsDivision": "",
+        "PORound": "0",
+        "PlayerExperience": "",
+        "PlayerPosition": "",
+        "StarterBench": "",
+        "GameScope": "",
+        "ShotClockRange": "",
+        "Conference": "",
+        "Division": "",
+        "College": "",
+        "Country": "",
+        "DraftPick": "",
+        "DraftYear": "",
+        "Height": "",
+        "Weight": "",
+        "TwoWay": "0",
+        "ISTRound": "",
+        "Season": "2025",
+        "MeasureType": "Advanced"
+      },
+      "ok": true,
+      "rows": {
+        "LeagueDashPlayerStats": 182
+      },
+      "ms": 21302
+    },
+    {
+      "endpoint": "leagueleaders",
+      "file": "leagueleaders-2025-pts",
+      "params": {
+        "LeagueID": "10",
+        "PerMode": "PerGame",
+        "Scope": "S",
+        "Season": "2025",
+        "SeasonType": "Regular Season",
+        "StatCategory": "PTS",
+        "ActiveFlag": ""
+      },
+      "ok": true,
+      "rows": {
+        "LeagueLeaders": 104
+      },
+      "ms": 478
+    },
+    {
+      "endpoint": "leaguedashplayerstats",
+      "file": "leaguedashplayerstats-2026-base",
+      "params": {
+        "LeagueID": "10",
+        "SeasonType": "Regular Season",
+        "PerMode": "PerGame",
+        "PaceAdjust": "N",
+        "PlusMinus": "N",
+        "Rank": "N",
+        "LastNGames": "0",
+        "Month": "0",
+        "OpponentTeamID": "0",
+        "Period": "0",
+        "TeamID": "0",
+        "DateFrom": "",
+        "DateTo": "",
+        "GameSegment": "",
+        "Location": "",
+        "Outcome": "",
+        "SeasonSegment": "",
+        "VsConference": "",
+        "VsDivision": "",
+        "PORound": "0",
+        "PlayerExperience": "",
+        "PlayerPosition": "",
+        "StarterBench": "",
+        "GameScope": "",
+        "ShotClockRange": "",
+        "Conference": "",
+        "Division": "",
+        "College": "",
+        "Country": "",
+        "DraftPick": "",
+        "DraftYear": "",
+        "Height": "",
+        "Weight": "",
+        "TwoWay": "0",
+        "ISTRound": "",
+        "Season": "2026",
+        "MeasureType": "Base"
+      },
+      "ok": true,
+      "rows": {
+        "LeagueDashPlayerStats": 239
+      },
+      "ms": 1289
+    },
+    {
+      "endpoint": "leaguedashplayerstats",
+      "file": "leaguedashplayerstats-2026-advanced",
+      "params": {
+        "LeagueID": "10",
+        "SeasonType": "Regular Season",
+        "PerMode": "PerGame",
+        "PaceAdjust": "N",
+        "PlusMinus": "N",
+        "Rank": "N",
+        "LastNGames": "0",
+        "Month": "0",
+        "OpponentTeamID": "0",
+        "Period": "0",
+        "TeamID": "0",
+        "DateFrom": "",
+        "DateTo": "",
+        "GameSegment": "",
+        "Location": "",
+        "Outcome": "",
+        "SeasonSegment": "",
+        "VsConference": "",
+        "VsDivision": "",
+        "PORound": "0",
+        "PlayerExperience": "",
+        "PlayerPosition": "",
+        "StarterBench": "",
+        "GameScope": "",
+        "ShotClockRange": "",
+        "Conference": "",
+        "Division": "",
+        "College": "",
+        "Country": "",
+        "DraftPick": "",
+        "DraftYear": "",
+        "Height": "",
+        "Weight": "",
+        "TwoWay": "0",
+        "ISTRound": "",
+        "Season": "2026",
+        "MeasureType": "Advanced"
+      },
+      "ok": true,
+      "rows": {
+        "LeagueDashPlayerStats": 239
+      },
+      "ms": 1473
+    },
+    {
+      "endpoint": "leagueleaders",
+      "file": "leagueleaders-2026-pts",
+      "params": {
+        "LeagueID": "10",
+        "PerMode": "PerGame",
+        "Scope": "S",
+        "Season": "2026",
+        "SeasonType": "Regular Season",
+        "StatCategory": "PTS",
+        "ActiveFlag": ""
+      },
+      "ok": true,
+      "rows": {
+        "LeagueLeaders": 125
+      },
+      "ms": 192
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661313",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661313"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 2
+      },
+      "ms": 21113
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661317",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661317"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 5
+      },
+      "ms": 310
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661319",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661319"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 11,
+        "Coaches": 8
+      },
+      "ms": 21012
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661320",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661320"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 6
+      },
+      "ms": 20380
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661321",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661321"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 4
+      },
+      "ms": 20269
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661322",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661322"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 5
+      },
+      "ms": 294
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661323",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661323"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 6
+      },
+      "ms": 20984
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661324",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661324"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 6
+      },
+      "ms": 298
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661325",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661325"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 16,
+        "Coaches": 6
+      },
+      "ms": 1053
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661327",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661327"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 0,
+        "Coaches": 0
+      },
+      "ms": 2496
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661328",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661328"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 2
+      },
+      "ms": 166
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661329",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661329"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 6
+      },
+      "ms": 21180
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661330",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661330"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 12,
+        "Coaches": 6
+      },
+      "ms": 330
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2025-1611661331",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2025",
+        "TeamID": "1611661331"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 13,
+        "Coaches": 6
+      },
+      "ms": 20991
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661313",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661313"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 6
+      },
+      "ms": 445
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661317",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661317"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 7
+      },
+      "ms": 781
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661319",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661319"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 9
+      },
+      "ms": 872
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661320",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661320"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 14,
+        "Coaches": 6
+      },
+      "ms": 1178
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661321",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661321"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 16,
+        "Coaches": 7
+      },
+      "ms": 1021
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661322",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661322"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 14,
+        "Coaches": 4
+      },
+      "ms": 1024
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661323",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661323"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 14,
+        "Coaches": 6
+      },
+      "ms": 21094
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661324",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661324"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 6
+      },
+      "ms": 432
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661325",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661325"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 4
+      },
+      "ms": 856
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661327",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661327"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 16,
+        "Coaches": 5
+      },
+      "ms": 976
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661328",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661328"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 14,
+        "Coaches": 5
+      },
+      "ms": 838
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661329",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661329"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 7
+      },
+      "ms": 1128
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661330",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661330"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 14,
+        "Coaches": 6
+      },
+      "ms": 21060
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661331",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661331"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 15,
+        "Coaches": 5
+      },
+      "ms": 113
+    },
+    {
+      "endpoint": "commonteamroster",
+      "file": "commonteamroster/2026-1611661332",
+      "params": {
+        "LeagueID": "10",
+        "Season": "2026",
+        "TeamID": "1611661332"
+      },
+      "ok": true,
+      "rows": {
+        "CommonTeamRoster": 16,
+        "Coaches": 6
+      },
+      "ms": 1061
+    },
+    {
+      "endpoint": "commonplayerinfo",
+      "file": "commonplayerinfo/*",
+      "ok": true,
+      "rows": {
+        "players": 245,
+        "ok": 245,
+        "failed": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "errors": [],
+  "headshots": {
+    "pageUrl": "https://www.wnba.com/player/1642777/monique_akoa_makani",
+    "pattern": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/{personId}.png",
+    "placeholder": {
+      "personId": "999999999",
+      "status": 200,
+      "etag": "\"dab8a90a5529e57031c31e63bcd4b7d0\"",
+      "contentLength": "12531"
+    },
+    "verification": [
+      {
+        "personId": 201886,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/201886.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "258487",
+        "etag": "\"a2f3686c3a2ad198987f996abf4d313a\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1628278,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1628278.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "183099",
+        "etag": "\"e3532aabc7b7e20c5722fd09b42cd8ee\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1630386,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1630386.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "260816",
+        "etag": "\"da02c05f90adb09fdfc836b07cc96774\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1642292,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1642292.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "289375",
+        "etag": "\"827d559d8d8f21a15a39fa2277ee2042\"",
+        "isPlaceholder": false
+      },
+      {
+        "personId": 1642835,
+        "url": "https://cdn.wnba.com/headshots/wnba/latest/1040x760/1642835.png",
+        "status": 200,
+        "contentType": "image/png",
+        "contentLength": "12531",
+        "etag": "\"dab8a90a5529e57031c31e63bcd4b7d0\"",
+        "isPlaceholder": true
+      }
+    ]
+  },
+  "finishedAt": "2026-10-06T03:43:05.832Z"
+}

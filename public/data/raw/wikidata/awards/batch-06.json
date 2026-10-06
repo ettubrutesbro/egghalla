@@ -1,0 +1,120 @@
+{
+  "source": "wikidata-sparql",
+  "url": "https://query.wikidata.org/sparql",
+  "retrievedAt": "2026-10-06T03:31:06.548Z",
+  "params": {
+    "query": "SELECT ?player ?award ?awardLabel ?pointInTime WHERE {\n  VALUES ?player { wd:Q3820585 wd:Q3820611 wd:Q3825465 wd:Q3827802 wd:Q3828279 wd:Q3831372 wd:Q3832596 wd:Q3841023 wd:Q384196 wd:Q3842205 wd:Q3845437 wd:Q38459860 wd:Q3848035 wd:Q3849968 wd:Q3853931 wd:Q3853932 wd:Q3853935 wd:Q3855178 wd:Q3855242 wd:Q3855901 wd:Q3856832 wd:Q3856872 wd:Q3856873 wd:Q3857510 wd:Q3867446 wd:Q3869849 wd:Q3876066 wd:Q3876638 wd:Q3877048 wd:Q3881407 wd:Q3881436 wd:Q3894881 wd:Q389506 wd:Q3898208 wd:Q3901030 wd:Q3907627 wd:Q3929220 wd:Q3937251 wd:Q3942861 wd:Q3952167 wd:Q3954994 wd:Q3959065 wd:Q3959158 wd:Q3959210 wd:Q3959252 wd:Q3959392 wd:Q3959404 wd:Q3961216 wd:Q3964944 wd:Q3967704 wd:Q3967707 wd:Q3973153 wd:Q3976925 wd:Q3978247 wd:Q3978504 wd:Q3979084 wd:Q3980565 wd:Q3980619 wd:Q3980621 wd:Q3981265 wd:Q3981570 wd:Q3991225 wd:Q3991231 wd:Q3993328 wd:Q3993586 wd:Q3998703 wd:Q4001127 wd:Q4001170 wd:Q4003527 wd:Q4008544 wd:Q4008547 wd:Q4008550 wd:Q4024558 wd:Q40448866 wd:Q40448894 wd:Q40448895 wd:Q40450966 wd:Q40451025 wd:Q40451031 wd:Q40451045 wd:Q40451047 wd:Q40451049 wd:Q40451056 wd:Q40451068 wd:Q40451070 wd:Q40451082 wd:Q40451084 wd:Q40451087 wd:Q40451090 wd:Q40451092 wd:Q40451100 wd:Q40451105 wd:Q40451107 wd:Q40451112 wd:Q40451118 wd:Q40451122 wd:Q40451127 wd:Q40451129 wd:Q40451132 wd:Q40451137 wd:Q40451140 wd:Q40451144 wd:Q40451146 wd:Q40451147 wd:Q40451151 wd:Q40451157 wd:Q40451158 wd:Q40451161 wd:Q40451167 wd:Q40451169 wd:Q40451170 wd:Q40451171 wd:Q40451175 wd:Q40451177 wd:Q40451181 wd:Q40451208 wd:Q40451211 wd:Q40451213 wd:Q40451214 wd:Q40451217 wd:Q40451234 wd:Q40451237 wd:Q40451240 wd:Q40451242 wd:Q40451247 wd:Q40674490 wd:Q4153527 wd:Q41673320 wd:Q4167944 wd:Q41711164 wd:Q42228 wd:Q425613 wd:Q427942 wd:Q42894095 wd:Q431004 wd:Q431920 wd:Q432797 wd:Q432836 wd:Q433184 wd:Q433392 wd:Q433521 wd:Q434152 wd:Q434178 wd:Q43422347 wd:Q43424022 wd:Q43424036 wd:Q43424062 wd:Q43424180 wd:Q43424196 wd:Q43424212 }\n  ?player p:P166 ?st .\n  ?st ps:P166 ?award .\n  ?award rdfs:label ?awardLabel .\n  FILTER(LANG(?awardLabel) = \"en\" && CONTAINS(?awardLabel, \"WNBA\"))\n  OPTIONAL { ?st pq:P585 ?pointInTime }\n}",
+    "wnbaItem": "Q2593221",
+    "batch": 6,
+    "players": 150
+  },
+  "data": {
+    "head": {
+      "vars": [
+        "player",
+        "award",
+        "awardLabel",
+        "pointInTime"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q433521"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1518653"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Finals Most Valuable Player Award"
+          }
+        },
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q433521"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q505872"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Defensive Player of the Year Award"
+          },
+          "pointInTime": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2011-01-01T00:00:00Z"
+          }
+        },
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q433521"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1339172"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Most Valuable Player Award"
+          },
+          "pointInTime": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2017-01-01T00:00:00Z"
+          }
+        },
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q431920"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3564733"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA All-Rookie Team"
+          },
+          "pointInTime": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2009-01-01T00:00:00Z"
+          }
+        },
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q433521"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3564733"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA All-Rookie Team"
+          },
+          "pointInTime": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "2008-01-01T00:00:00Z"
+          }
+        }
+      ]
+    }
+  }
+}

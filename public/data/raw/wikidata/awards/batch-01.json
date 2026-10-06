@@ -1,0 +1,40 @@
+{
+  "source": "wikidata-sparql",
+  "url": "https://query.wikidata.org/sparql",
+  "retrievedAt": "2026-10-06T03:31:01.465Z",
+  "params": {
+    "query": "SELECT ?player ?award ?awardLabel ?pointInTime WHERE {\n  VALUES ?player { wd:Q119539122 wd:Q119539254 wd:Q119539485 wd:Q119540064 wd:Q119540270 wd:Q119540277 wd:Q119540453 wd:Q119540821 wd:Q119541424 wd:Q119541563 wd:Q119541574 wd:Q119541711 wd:Q119541808 wd:Q119541854 wd:Q119542017 wd:Q119542140 wd:Q119542184 wd:Q119542558 wd:Q119542647 wd:Q119542802 wd:Q119543049 wd:Q119543094 wd:Q119543528 wd:Q119544019 wd:Q119544167 wd:Q119544367 wd:Q119544412 wd:Q119545713 wd:Q119545929 wd:Q119545957 wd:Q119546002 wd:Q119546108 wd:Q119546390 wd:Q119546432 wd:Q119546558 wd:Q119547234 wd:Q119547411 wd:Q119547423 wd:Q119547480 wd:Q119547520 wd:Q119548084 wd:Q119548135 wd:Q119548171 wd:Q119548466 wd:Q119548912 wd:Q119549014 wd:Q119549164 wd:Q119549607 wd:Q119549691 wd:Q119550404 wd:Q119550595 wd:Q119550661 wd:Q119550682 wd:Q119550776 wd:Q119551431 wd:Q119551566 wd:Q119551738 wd:Q119551926 wd:Q119552078 wd:Q119552203 wd:Q119552287 wd:Q119552615 wd:Q119553097 wd:Q119553507 wd:Q119553624 wd:Q119554010 wd:Q119554324 wd:Q119555304 wd:Q119555369 wd:Q119555457 wd:Q119555568 wd:Q119555712 wd:Q119555768 wd:Q119555824 wd:Q119556131 wd:Q119556621 wd:Q119556661 wd:Q119557683 wd:Q119558017 wd:Q119558281 wd:Q119558350 wd:Q119558488 wd:Q119558792 wd:Q119559247 wd:Q119559826 wd:Q119560001 wd:Q119560004 wd:Q119560328 wd:Q119560793 wd:Q119560878 wd:Q119560954 wd:Q119561298 wd:Q119561345 wd:Q119561417 wd:Q119562099 wd:Q119562472 wd:Q119562557 wd:Q119562639 wd:Q119562865 wd:Q119563771 wd:Q119563816 wd:Q119563834 wd:Q119564161 wd:Q119564677 wd:Q119565437 wd:Q119565670 wd:Q119565918 wd:Q119566243 wd:Q119567000 wd:Q119567314 wd:Q119567610 wd:Q119567734 wd:Q119568216 wd:Q119568314 wd:Q119569370 wd:Q119569459 wd:Q119570193 wd:Q119570584 wd:Q119570759 wd:Q119570774 wd:Q119570826 wd:Q119713075 wd:Q120187138 wd:Q120484419 wd:Q121637 wd:Q123669747 wd:Q124216554 wd:Q124424082 wd:Q124609370 wd:Q124940 wd:Q125107098 wd:Q125498790 wd:Q125504079 wd:Q126187974 wd:Q128243 wd:Q129350428 wd:Q1294696 wd:Q130612702 wd:Q132197068 wd:Q133880204 wd:Q134029224 wd:Q13407959 wd:Q13460940 wd:Q134731487 wd:Q135226037 wd:Q135339008 wd:Q135347509 wd:Q135357510 wd:Q135358760 wd:Q135358848 }\n  ?player p:P166 ?st .\n  ?st ps:P166 ?award .\n  ?award rdfs:label ?awardLabel .\n  FILTER(LANG(?awardLabel) = \"en\" && CONTAINS(?awardLabel, \"WNBA\"))\n  OPTIONAL { ?st pq:P585 ?pointInTime }\n}",
+    "wnbaItem": "Q2593221",
+    "batch": 1,
+    "players": 150
+  },
+  "data": {
+    "head": {
+      "vars": [
+        "player",
+        "award",
+        "awardLabel",
+        "pointInTime"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "player": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q124940"
+          },
+          "award": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1518653"
+          },
+          "awardLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA Finals Most Valuable Player Award"
+          }
+        }
+      ]
+    }
+  }
+}

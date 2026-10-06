@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-10-06T03:44:24.490Z",
+  "counts": {
+    "ambiguous": 0,
+    "unmatched": 7,
+    "lowConfidence": 0,
+    "conflicts": 1
+  },
+  "ambiguous": [],
+  "unmatched": [
+    {
+      "personId": 1630384,
+      "name": "Raquel Carrera",
+      "birthdate": "2001-10-31",
+      "reason": "no Wikidata candidate",
+      "candidates": []
+    },
+    {
+      "personId": 1630469,
+      "name": "Marine Fauthoux",
+      "birthdate": "2001-01-23",
+      "reason": "no Wikidata candidate",
+      "candidates": []
+    },
+    {
+      "personId": 1641663,
+      "name": "Elizabeth Balogun",
+      "birthdate": "2000-09-09",
+      "reason": "no Wikidata candidate",
+      "candidates": []
+    },
+    {
+      "personId": 1641683,
+      "name": "Holly Winterburn",
+      "birthdate": "2000-10-01",
+      "reason": "no Wikidata candidate",
+      "candidates": []
+    },
+    {
+      "personId": 1642835,
+      "name": "Morgan Maly",
+      "birthdate": "2002-01-25",
+      "reason": "no Wikidata candidate",
+      "candidates": []
+    },
+    {
+      "personId": 1643825,
+      "name": "Elena Buenavida",
+      "birthdate": "2004-03-08",
+      "reason": "no Wikidata candidate",
+      "candidates": []
+    },
+    {
+      "personId": 1643832,
+      "name": "Aminata Gueye",
+      "birthdate": "2002-07-10",
+      "reason": "no Wikidata candidate",
+      "candidates": []
+    }
+  ],
+  "lowConfidence": [],
+  "conflicts": [
+    {
+      "personId": 1628899,
+      "name": "Myisha Hines-Allen",
+      "birthdate": "1995-05-30",
+      "qid": "Q56224090",
+      "issue": "birthdate differs: WNBA 1995-05-30 vs Wikidata 1996-05-30"
+    }
+  ]
+}

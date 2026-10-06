@@ -1,0 +1,152 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=1642784",
+  "retrievedAt": "2026-10-06T03:40:24.029Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "1642784"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 1642784
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            1642784,
+            "Paige",
+            "Bueckers",
+            "Paige Bueckers",
+            "Bueckers, Paige",
+            "P. Bueckers",
+            "paige-bueckers",
+            "2001-10-20T00:00:00",
+            "Connecticut",
+            "USA",
+            "Connecticut/USA",
+            "6-0",
+            "",
+            1,
+            "5",
+            "Guard",
+            "Active",
+            "Y",
+            1611661321,
+            "Wings",
+            "DAL",
+            "wings",
+            "Dallas",
+            "paige_bueckers",
+            2025,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2025",
+            "1",
+            "1",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            1642784,
+            "Paige Bueckers",
+            "2026",
+            20.9,
+            5.9,
+            4.1,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "32025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ],
+          [
+            "32026"
+          ],
+          [
+            "42026"
+          ]
+        ]
+      }
+    ]
+  }
+}

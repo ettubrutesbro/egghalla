@@ -1,0 +1,251 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=203398",
+  "retrievedAt": "2026-10-06T03:36:08.347Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "203398"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 203398
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            203398,
+            "Brittney",
+            "Griner",
+            "Brittney Griner",
+            "Griner, Brittney",
+            "B. Griner",
+            "brittney-griner",
+            "1990-10-18T00:00:00",
+            "Baylor",
+            "USA",
+            "Baylor/USA",
+            "6-9",
+            "219",
+            12,
+            "42",
+            "Center",
+            "Active",
+            "Y",
+            1611661323,
+            "Sun",
+            "CON",
+            "sun",
+            "Connecticut",
+            "brittney_griner",
+            2013,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2013",
+            "1",
+            "1",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            203398,
+            "Brittney Griner",
+            "2026",
+            13.2,
+            2.5,
+            5.8,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12013"
+          ],
+          [
+            "22013"
+          ],
+          [
+            "42013"
+          ],
+          [
+            "12014"
+          ],
+          [
+            "22014"
+          ],
+          [
+            "32014"
+          ],
+          [
+            "42014"
+          ],
+          [
+            "12015"
+          ],
+          [
+            "22015"
+          ],
+          [
+            "32015"
+          ],
+          [
+            "42015"
+          ],
+          [
+            "22016"
+          ],
+          [
+            "42016"
+          ],
+          [
+            "22017"
+          ],
+          [
+            "42017"
+          ],
+          [
+            "12018"
+          ],
+          [
+            "22018"
+          ],
+          [
+            "32018"
+          ],
+          [
+            "42018"
+          ],
+          [
+            "12019"
+          ],
+          [
+            "22019"
+          ],
+          [
+            "32019"
+          ],
+          [
+            "42019"
+          ],
+          [
+            "22020"
+          ],
+          [
+            "12021"
+          ],
+          [
+            "22021"
+          ],
+          [
+            "32021"
+          ],
+          [
+            "42021"
+          ],
+          [
+            "12023"
+          ],
+          [
+            "22023"
+          ],
+          [
+            "32023"
+          ],
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "32024"
+          ],
+          [
+            "42024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "42025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ]
+        ]
+      }
+    ]
+  }
+}

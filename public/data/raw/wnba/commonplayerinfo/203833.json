@@ -1,0 +1,248 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=203833",
+  "retrievedAt": "2026-10-06T03:36:18.232Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "203833"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 203833
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            203833,
+            "Chelsea",
+            "Gray",
+            "Chelsea Gray",
+            "Gray, Chelsea",
+            "C. Gray",
+            "chelsea-gray",
+            "1992-10-08T00:00:00",
+            "Duke",
+            "USA",
+            "Duke/USA",
+            "5-11",
+            "170",
+            11,
+            "12",
+            "Guard",
+            "Active",
+            "Y",
+            1611661319,
+            "Aces",
+            "LVA",
+            "aces",
+            "Las Vegas",
+            "chelsea_gray",
+            2015,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2014",
+            "1",
+            "11",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            203833,
+            "Chelsea Gray",
+            "2026",
+            12,
+            6.7,
+            3.3,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12015"
+          ],
+          [
+            "22015"
+          ],
+          [
+            "12016"
+          ],
+          [
+            "22016"
+          ],
+          [
+            "42016"
+          ],
+          [
+            "12017"
+          ],
+          [
+            "22017"
+          ],
+          [
+            "32017"
+          ],
+          [
+            "42017"
+          ],
+          [
+            "12018"
+          ],
+          [
+            "22018"
+          ],
+          [
+            "32018"
+          ],
+          [
+            "42018"
+          ],
+          [
+            "22019"
+          ],
+          [
+            "32019"
+          ],
+          [
+            "42019"
+          ],
+          [
+            "22020"
+          ],
+          [
+            "42020"
+          ],
+          [
+            "22021"
+          ],
+          [
+            "32021"
+          ],
+          [
+            "42021"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "42022"
+          ],
+          [
+            "52022"
+          ],
+          [
+            "12023"
+          ],
+          [
+            "22023"
+          ],
+          [
+            "32023"
+          ],
+          [
+            "42023"
+          ],
+          [
+            "52023"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "32024"
+          ],
+          [
+            "42024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "42025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ],
+          [
+            "42026"
+          ],
+          [
+            "52026"
+          ]
+        ]
+      }
+    ]
+  }
+}

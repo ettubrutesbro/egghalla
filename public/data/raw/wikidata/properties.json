@@ -1,0 +1,442 @@
+{
+  "source": "wikidata-sparql",
+  "url": "https://query.wikidata.org/sparql",
+  "retrievedAt": "2026-10-06T03:30:54.663Z",
+  "params": {
+    "query": "SELECT ?p ?pLabel ?pDescription ?formatter WHERE {\n  ?p wikibase:propertyType wikibase:ExternalId ;\n     rdfs:label ?pLabel .\n  FILTER(LANG(?pLabel) = \"en\")\n  FILTER(CONTAINS(LCASE(?pLabel), \"wnba\")\n      || CONTAINS(LCASE(?pLabel), \"basketball-reference\")\n      || CONTAINS(LCASE(?pLabel), \"basketball reference\")\n      || CONTAINS(LCASE(?pLabel), \"espn\"))\n  OPTIONAL { ?p schema:description ?pDescription . FILTER(LANG(?pDescription) = \"en\") }\n  OPTIONAL { ?p wdt:P1630 ?formatter }\n}"
+  },
+  "data": {
+    "head": {
+      "vars": [
+        "p",
+        "pLabel",
+        "pDescription",
+        "formatter"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P4790"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a basketball player in a non-U.S. league on Basketball-Reference.com"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference international player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/international/players/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P4795"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a referee on the Basketball Reference website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference referee ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/referees/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P4796"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a NBL player on the Basketball Reference website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference NBL player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/nbl/players/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P7262"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a college football player at ESPN.com"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com college football player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/ncf/player/profile?playerId=$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P10073"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier of an fighter on ESPN.com/mma"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com MMA fighter ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/mma/fighter/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P11585"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a tennis player on ESPN.com website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com tennis player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/tennis/player/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P13284"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a association football (soccer) match in the ESPN.com database"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com football match ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/football/match/_/gameId/$1/"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P13590"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a soccer team in the espn.com database"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "espn.com soccer team ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/soccer/team/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P858"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for an international rugby union player, from ESPN.co.uk or ESPNscrum.com"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPNscrum player ID (archived)"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://web.archive.org/web/2024/http://www.espnscrum.com/timeline/rugby/player/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P2685"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a NBA player on the Basketball Reference website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference NBA player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/players/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P3571"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ID for a Major League Baseball player at ESPN.com"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com MLB player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/mlb/player/stats/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P3572"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ID of cricket ground at ESPNcricinfo"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPNcricinfo playing ground ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espncricinfo.com/ci/content/ground/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P3588"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a player on the Women's National Basketball Association's website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "WNBA.com player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://stats.wnba.com/player/$1/"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P3681"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for an association football (soccer) player at ESPN FC"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN FC player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://global.espn.com/football/player/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P3685"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a National Basketball Association player at ESPN.com"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com NBA player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/nba/player/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P3686"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a National Football League player at ESPN.com"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com NFL player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/nfl/player/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P3687"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a National Hockey League player at ESPN.com"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ESPN.com NHL player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.espn.com/nhl/player/_/id/$1"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P4561"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a Women's National Basketball Association player on the Basketball-Reference.com website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference WNBA player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/wnba/players/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P4718"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a NBA coach on the Basketball Reference website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference NBA coach ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/coaches/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P4720"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for a WNBA coach on the Basketball Reference website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference WNBA coach ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/wnba/coaches/$1.html"
+          }
+        },
+        {
+          "p": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/P4744"
+          },
+          "pDescription": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "identifier for an NBA G League (formerly NBDL) player on the Basketball Reference website"
+          },
+          "pLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Basketball Reference NBA G League player ID"
+          },
+          "formatter": {
+            "type": "literal",
+            "value": "https://www.basketball-reference.com/gleague/players/$1.html"
+          }
+        }
+      ]
+    }
+  }
+}

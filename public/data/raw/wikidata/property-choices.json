@@ -1,0 +1,144 @@
+{
+  "source": "derived",
+  "url": null,
+  "retrievedAt": "2026-10-06T03:31:09.537Z",
+  "params": {
+    "from": "properties.json"
+  },
+  "data": {
+    "chosen": {
+      "wnba": "P3588",
+      "bref": "P4561",
+      "espn": null
+    },
+    "candidates": [
+      {
+        "pid": "P4790",
+        "label": "Basketball Reference international player ID",
+        "description": "identifier for a basketball player in a non-U.S. league on Basketball-Reference.com",
+        "formatter": "https://www.basketball-reference.com/international/players/$1.html"
+      },
+      {
+        "pid": "P4795",
+        "label": "Basketball Reference referee ID",
+        "description": "identifier for a referee on the Basketball Reference website",
+        "formatter": "https://www.basketball-reference.com/referees/$1.html"
+      },
+      {
+        "pid": "P4796",
+        "label": "Basketball Reference NBL player ID",
+        "description": "identifier for a NBL player on the Basketball Reference website",
+        "formatter": "https://www.basketball-reference.com/nbl/players/$1.html"
+      },
+      {
+        "pid": "P7262",
+        "label": "ESPN.com college football player ID",
+        "description": "identifier for a college football player at ESPN.com",
+        "formatter": "https://www.espn.com/ncf/player/profile?playerId=$1"
+      },
+      {
+        "pid": "P10073",
+        "label": "ESPN.com MMA fighter ID",
+        "description": "identifier of an fighter on ESPN.com/mma",
+        "formatter": "https://www.espn.com/mma/fighter/_/id/$1"
+      },
+      {
+        "pid": "P11585",
+        "label": "ESPN.com tennis player ID",
+        "description": "identifier for a tennis player on ESPN.com website",
+        "formatter": "https://www.espn.com/tennis/player/_/id/$1"
+      },
+      {
+        "pid": "P13284",
+        "label": "ESPN.com football match ID",
+        "description": "identifier for a association football (soccer) match in the ESPN.com database",
+        "formatter": "https://www.espn.com/football/match/_/gameId/$1/"
+      },
+      {
+        "pid": "P13590",
+        "label": "espn.com soccer team ID",
+        "description": "identifier for a soccer team in the espn.com database",
+        "formatter": "https://www.espn.com/soccer/team/_/id/$1"
+      },
+      {
+        "pid": "P858",
+        "label": "ESPNscrum player ID (archived)",
+        "description": "identifier for an international rugby union player, from ESPN.co.uk or ESPNscrum.com",
+        "formatter": "https://web.archive.org/web/2024/http://www.espnscrum.com/timeline/rugby/player/$1.html"
+      },
+      {
+        "pid": "P2685",
+        "label": "Basketball Reference NBA player ID",
+        "description": "identifier for a NBA player on the Basketball Reference website",
+        "formatter": "https://www.basketball-reference.com/players/$1.html"
+      },
+      {
+        "pid": "P3571",
+        "label": "ESPN.com MLB player ID",
+        "description": "ID for a Major League Baseball player at ESPN.com",
+        "formatter": "https://www.espn.com/mlb/player/stats/_/id/$1"
+      },
+      {
+        "pid": "P3572",
+        "label": "ESPNcricinfo playing ground ID",
+        "description": "ID of cricket ground at ESPNcricinfo",
+        "formatter": "https://www.espncricinfo.com/ci/content/ground/$1.html"
+      },
+      {
+        "pid": "P3588",
+        "label": "WNBA.com player ID",
+        "description": "identifier for a player on the Women's National Basketball Association's website",
+        "formatter": "https://stats.wnba.com/player/$1/"
+      },
+      {
+        "pid": "P3681",
+        "label": "ESPN FC player ID",
+        "description": "identifier for an association football (soccer) player at ESPN FC",
+        "formatter": "https://global.espn.com/football/player/_/id/$1"
+      },
+      {
+        "pid": "P3685",
+        "label": "ESPN.com NBA player ID",
+        "description": "identifier for a National Basketball Association player at ESPN.com",
+        "formatter": "https://www.espn.com/nba/player/_/id/$1"
+      },
+      {
+        "pid": "P3686",
+        "label": "ESPN.com NFL player ID",
+        "description": "identifier for a National Football League player at ESPN.com",
+        "formatter": "https://www.espn.com/nfl/player/_/id/$1"
+      },
+      {
+        "pid": "P3687",
+        "label": "ESPN.com NHL player ID",
+        "description": "identifier for a National Hockey League player at ESPN.com",
+        "formatter": "https://www.espn.com/nhl/player/_/id/$1"
+      },
+      {
+        "pid": "P4561",
+        "label": "Basketball Reference WNBA player ID",
+        "description": "identifier for a Women's National Basketball Association player on the Basketball-Reference.com website",
+        "formatter": "https://www.basketball-reference.com/wnba/players/$1.html"
+      },
+      {
+        "pid": "P4718",
+        "label": "Basketball Reference NBA coach ID",
+        "description": "identifier for a NBA coach on the Basketball Reference website",
+        "formatter": "https://www.basketball-reference.com/coaches/$1.html"
+      },
+      {
+        "pid": "P4720",
+        "label": "Basketball Reference WNBA coach ID",
+        "description": "identifier for a WNBA coach on the Basketball Reference website",
+        "formatter": "https://www.basketball-reference.com/wnba/coaches/$1.html"
+      },
+      {
+        "pid": "P4744",
+        "label": "Basketball Reference NBA G League player ID",
+        "description": "identifier for an NBA G League (formerly NBDL) player on the Basketball Reference website",
+        "formatter": "https://www.basketball-reference.com/gleague/players/$1.html"
+      }
+    ],
+    "wnbaItem": "Q2593221"
+  }
+}

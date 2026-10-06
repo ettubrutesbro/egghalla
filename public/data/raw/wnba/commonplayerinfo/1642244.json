@@ -1,0 +1,146 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=1642244",
+  "retrievedAt": "2026-10-06T03:39:28.738Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "1642244"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 1642244
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            1642244,
+            "Sevgi",
+            "Uzun",
+            "Sevgi Uzun",
+            "Uzun, Sevgi",
+            "S. Uzun",
+            "sevgi-uzun",
+            "1997-11-25T00:00:00",
+            null,
+            "Turkey",
+            "Turkey/Turkey",
+            "5-10",
+            "141",
+            3,
+            "10",
+            "Guard",
+            "Inactive",
+            "Y",
+            1611661329,
+            "Sky",
+            "CHI",
+            "sky",
+            "Chicago",
+            "sevgi_ugun",
+            2024,
+            2025,
+            "N",
+            "N",
+            "Y",
+            "Undrafted",
+            "Undrafted",
+            "Undrafted",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "ALL_STAR_APPEARANCES"
+        ],
+        "rowSet": [
+          [
+            1642244,
+            "Sevgi Uzun",
+            "career",
+            3.9,
+            2.8,
+            1.5,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "12026"
+          ]
+        ]
+      }
+    ]
+  }
+}

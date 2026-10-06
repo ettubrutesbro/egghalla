@@ -1,0 +1,203 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=1629477",
+  "retrievedAt": "2026-10-06T03:37:34.681Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "1629477"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 1629477
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            1629477,
+            "Sabrina",
+            "Ionescu",
+            "Sabrina Ionescu",
+            "Ionescu, Sabrina",
+            "S. Ionescu",
+            "sabrina-ionescu",
+            "1997-12-06T00:00:00",
+            "Oregon",
+            "USA",
+            "Oregon/USA",
+            "5-11",
+            "165",
+            6,
+            "20",
+            "Guard",
+            "Active",
+            "Y",
+            1611661313,
+            "Liberty",
+            "NYL",
+            "liberty",
+            "New York",
+            "sabrina_ionescu",
+            2020,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2020",
+            "1",
+            "1",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            1629477,
+            "Sabrina Ionescu",
+            "2026",
+            14.6,
+            4.7,
+            3.8,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "22020"
+          ],
+          [
+            "22021"
+          ],
+          [
+            "42021"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "32022"
+          ],
+          [
+            "42022"
+          ],
+          [
+            "12023"
+          ],
+          [
+            "22023"
+          ],
+          [
+            "32023"
+          ],
+          [
+            "42023"
+          ],
+          [
+            "52023"
+          ],
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "32024"
+          ],
+          [
+            "42024"
+          ],
+          [
+            "52024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "32025"
+          ],
+          [
+            "42025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ],
+          [
+            "42026"
+          ],
+          [
+            "52026"
+          ]
+        ]
+      }
+    ]
+  }
+}

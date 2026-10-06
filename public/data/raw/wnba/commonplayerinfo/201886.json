@@ -1,0 +1,287 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonplayerinfo?LeagueID=10&PlayerID=201886",
+  "retrievedAt": "2026-10-06T03:36:03.119Z",
+  "params": {
+    "endpoint": "commonplayerinfo",
+    "LeagueID": "10",
+    "PlayerID": "201886"
+  },
+  "data": {
+    "resource": "commonplayerinfo",
+    "parameters": [
+      {
+        "PlayerID": 201886
+      },
+      {
+        "LeagueID": "10"
+      }
+    ],
+    "resultSets": [
+      {
+        "name": "CommonPlayerInfo",
+        "headers": [
+          "PERSON_ID",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "DISPLAY_FIRST_LAST",
+          "DISPLAY_LAST_COMMA_FIRST",
+          "DISPLAY_FI_LAST",
+          "PLAYER_SLUG",
+          "BIRTHDATE",
+          "SCHOOL",
+          "COUNTRY",
+          "LAST_AFFILIATION",
+          "HEIGHT",
+          "WEIGHT",
+          "SEASON_EXP",
+          "JERSEY",
+          "POSITION",
+          "ROSTERSTATUS",
+          "GAMES_PLAYED_CURRENT_SEASON_FLAG",
+          "TEAM_ID",
+          "TEAM_NAME",
+          "TEAM_ABBREVIATION",
+          "TEAM_CODE",
+          "TEAM_CITY",
+          "PLAYERCODE",
+          "FROM_YEAR",
+          "TO_YEAR",
+          "DLEAGUE_FLAG",
+          "NBA_FLAG",
+          "GAMES_PLAYED_FLAG",
+          "DRAFT_YEAR",
+          "DRAFT_ROUND",
+          "DRAFT_NUMBER",
+          "GREATEST_75_FLAG",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": [
+          [
+            201886,
+            "DeWanna",
+            "Bonner",
+            "DeWanna Bonner",
+            "Bonner, DeWanna",
+            "D. Bonner",
+            "dewanna-bonner",
+            "1987-08-21T00:00:00",
+            "Auburn",
+            "USA",
+            "Auburn/USA",
+            "6-4",
+            "140",
+            16,
+            "24",
+            "Forward-Guard",
+            "Active",
+            "Y",
+            1611661330,
+            "Dream",
+            "ATL",
+            "dream",
+            "Atlanta",
+            "dewanna_bonner",
+            2009,
+            2026,
+            "N",
+            "N",
+            "Y",
+            "2009",
+            "1",
+            "5",
+            "N",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "PlayerHeadlineStats",
+        "headers": [
+          "PLAYER_ID",
+          "PLAYER_NAME",
+          "TimeFrame",
+          "PTS",
+          "AST",
+          "REB",
+          "PIE"
+        ],
+        "rowSet": [
+          [
+            201886,
+            "DeWanna Bonner",
+            "2026",
+            10.4,
+            1.6,
+            6,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "AvailableSeasons",
+        "headers": [
+          "SEASON_ID"
+        ],
+        "rowSet": [
+          [
+            "12009"
+          ],
+          [
+            "22009"
+          ],
+          [
+            "42009"
+          ],
+          [
+            "12010"
+          ],
+          [
+            "22010"
+          ],
+          [
+            "42010"
+          ],
+          [
+            "12011"
+          ],
+          [
+            "22011"
+          ],
+          [
+            "42011"
+          ],
+          [
+            "22012"
+          ],
+          [
+            "12013"
+          ],
+          [
+            "22013"
+          ],
+          [
+            "42013"
+          ],
+          [
+            "12014"
+          ],
+          [
+            "22014"
+          ],
+          [
+            "42014"
+          ],
+          [
+            "12015"
+          ],
+          [
+            "22015"
+          ],
+          [
+            "32015"
+          ],
+          [
+            "42015"
+          ],
+          [
+            "22016"
+          ],
+          [
+            "42016"
+          ],
+          [
+            "12018"
+          ],
+          [
+            "22018"
+          ],
+          [
+            "32018"
+          ],
+          [
+            "42018"
+          ],
+          [
+            "12019"
+          ],
+          [
+            "22019"
+          ],
+          [
+            "32019"
+          ],
+          [
+            "42019"
+          ],
+          [
+            "22020"
+          ],
+          [
+            "42020"
+          ],
+          [
+            "12021"
+          ],
+          [
+            "22021"
+          ],
+          [
+            "32021"
+          ],
+          [
+            "42021"
+          ],
+          [
+            "52021"
+          ],
+          [
+            "22022"
+          ],
+          [
+            "42022"
+          ],
+          [
+            "22023"
+          ],
+          [
+            "32023"
+          ],
+          [
+            "42023"
+          ],
+          [
+            "12024"
+          ],
+          [
+            "22024"
+          ],
+          [
+            "32024"
+          ],
+          [
+            "42024"
+          ],
+          [
+            "12025"
+          ],
+          [
+            "22025"
+          ],
+          [
+            "42025"
+          ],
+          [
+            "12026"
+          ],
+          [
+            "22026"
+          ],
+          [
+            "42026"
+          ]
+        ]
+      }
+    ]
+  }
+}

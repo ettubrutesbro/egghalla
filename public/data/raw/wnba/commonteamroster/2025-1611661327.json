@@ -1,0 +1,59 @@
+{
+  "source": "stats.wnba.com",
+  "url": "https://stats.wnba.com/stats/commonteamroster?LeagueID=10&Season=2025&TeamID=1611661327",
+  "retrievedAt": "2026-10-06T03:34:06.418Z",
+  "params": {
+    "endpoint": "commonteamroster",
+    "LeagueID": "10",
+    "Season": "2025",
+    "TeamID": "1611661327"
+  },
+  "data": {
+    "resource": "commonteamroster",
+    "parameters": {
+      "TeamID": 1611661327,
+      "LeagueID": "10",
+      "Season": "2025"
+    },
+    "resultSets": [
+      {
+        "name": "CommonTeamRoster",
+        "headers": [
+          "TeamID",
+          "SEASON",
+          "LeagueID",
+          "PLAYER",
+          "NICKNAME",
+          "PLAYER_SLUG",
+          "NUM",
+          "POSITION",
+          "HEIGHT",
+          "WEIGHT",
+          "BIRTH_DATE",
+          "AGE",
+          "EXP",
+          "SCHOOL",
+          "PLAYER_ID",
+          "HOW_ACQUIRED",
+          "SUPPLEMENTAL_STATUS"
+        ],
+        "rowSet": []
+      },
+      {
+        "name": "Coaches",
+        "headers": [
+          "COACH_ID",
+          "TEAM_ID",
+          "SEASON",
+          "FIRST_NAME",
+          "LAST_NAME",
+          "COACH_NAME",
+          "IS_ASSISTANT",
+          "COACH_TYPE",
+          "SORT_SEQUENCE"
+        ],
+        "rowSet": []
+      }
+    ]
+  }
+}

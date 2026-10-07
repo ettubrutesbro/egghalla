@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>egghalla data explorer</title>
+<style>
+  body { font: 12px/1.4 ui-monospace, Menlo, monospace; margin: 0; display: flex; height: 100vh; }
+  #left { flex: 1 1 60%; overflow: auto; border-right: 1px solid #ccc; }
+  #right { flex: 1 1 40%; overflow: auto; padding: 8px; }
+  #bar { position: sticky; top: 0; background: #eee; padding: 6px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; z-index: 1; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { padding: 2px 6px; border-bottom: 1px solid #eee; text-align: left; white-space: nowrap; vertical-align: middle; }
+  thead th { position: sticky; top: 34px; background: #f7f7f7; cursor: pointer; }
+  tr.sel { background: #ffe9a8; }
+  tbody tr:hover { background: #f3f3f3; cursor: pointer; }
+  .flag { color: #b00; }
+  img.thumb { height: 28px; display: block; }
+  img.big { width: 100%; max-width: 520px; background: #f3f3f3; }
+  .kv td:first-child { color: #666; }
+  h2 { margin: 4px 0; } h3 { margin: 14px 0 4px; border-bottom: 1px solid #ccc; }
+  pre { white-space: pre-wrap; word-break: break-all; background: #f7f7f7; padding: 6px; }
+  .stats td, .stats th { text-align: right; } .stats td:first-child, .stats th:first-child { text-align: left; }
+</style>
+</head>
+<body>
+<div id="left">
+  <div id="bar">
+    <input id="q" placeholder="search name / id / college…" size="28">
+    <select id="team"><option value="">all teams (2026)</option></select>
+    <label><input type="checkbox" id="issues"> issues only</label>
+    <label><input type="checkbox" id="thumbs" checked> thumbs</label>
+    <span id="count"></span>
+    <span id="loader" hidden>fetch failed — load file: <input type="file" id="file" accept=".json"></span>
+  </div>
+  <table>
+    <thead><tr id="head"></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</div>
+<div id="right"><p>select a player</p></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (v) => String(v ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const dash = (v) => (v === null || v === undefined || v === '' ? '<span class="flag">—</span>' : esc(v));
+
+let players = [];
+let issuesById = {};
+let sortKey = 'wnba', sortDir = 1;
+
+const teamIn = (p, season) => p.teams.find((t) => t.season === season)?.teamAbbr ?? null;
+const age = (bd) => bd ? Math.floor((Date.now() - new Date(bd)) / 3.15576e10) : null;
+
+function issuesFor(p) {
+  const out = [];
+  if (!p.ids.wikidata) out.push('no wikidata');
+  if (p.match?.notes) out.push(p.match.notes);
+  if (p.match?.confidence !== 'high') out.push(`match: ${p.match?.method}/${p.match?.confidence}`);
+  for (const k of ['birthdate', 'height', 'position', 'college', 'country']) if (!p.bio[k]) out.push(`missing ${k}`);
+  if (!p.headshotUrl) out.push('no headshot');
+  for (const i of issuesById[p.ids.wnba] ?? []) if (!out.includes(i)) out.push(i);
+  return out;
+}
+
+// column defs: [key, label, getter]
+const COLS = [
+  ['thumb', '', (p) => p.headshotUrl],
+  ['wnba', 'wnba id', (p) => Number(p.ids.wnba)],
+  ['name', 'name', (p) => p.name],
+  ['t26', '2026', (p) => teamIn(p, '2026')],
+  ['t25', '2025', (p) => teamIn(p, '2025')],
+  ['pos', 'pos', (p) => p.bio.position],
+  ['ht', 'ht', (p) => p.bio.height],
+  ['age', 'age', (p) => age(p.bio.birthdate)],
+  ['college', 'college', (p) => p.bio.college],
+  ['country', 'ctry', (p) => p.bio.country],
+  ['draft', 'draft', (p) => p.bio.draft?.year ? `${p.bio.draft.year} R${p.bio.draft.round} #${p.bio.draft.pick}` : null],
+  ['gp26', 'GP26', (p) => p.stats['2026']?.GP],
+  ['pts26', 'PTS26', (p) => p.stats['2026']?.PTS],
+  ['reb26', 'REB26', (p) => p.stats['2026']?.REB],
+  ['ast26', 'AST26', (p) => p.stats['2026']?.AST],
+  ['awards', 'awd', (p) => p.awards.length],
+  ['wd', 'wikidata', (p) => p.ids.wikidata],
+  ['issues', 'issues', (p) => issuesFor(p).length],
+];
+
+function renderHead() {
+  $('#head').innerHTML = COLS.map(([k, l]) => `<th data-k="${k}">${l}${sortKey === k ? (sortDir > 0 ? ' ▲' : ' ▼') : ''}</th>`).join('');
+}
+$('#head').onclick = (e) => {
+  const k = e.target.dataset.k; if (!k || k === 'thumb') return;
+  sortDir = sortKey === k ? -sortDir : 1; sortKey = k; renderHead(); renderRows();
+};
+
+function renderRows() {
+  const q = $('#q').value.trim().toLowerCase();
+  const team = $('#team').value;
+  const onlyIssues = $('#issues').checked;
+  const showThumbs = $('#thumbs').checked;
+  const get = COLS.find((c) => c[0] === sortKey)[2];
+  const list = players
+    .filter((p) => !q || [p.name, p.ids.wnba, p.ids.wikidata, p.bio.college, p.bio.country].join(' ').toLowerCase().includes(q))
+    .filter((p) => !team || teamIn(p, '2026') === team)
+    .filter((p) => !onlyIssues || issuesFor(p).length)
+    .sort((a, b) => {
+      const x = get(a), y = get(b);
+      if (x == null) return 1; if (y == null) return -1;
+      return (x > y ? 1 : x < y ? -1 : 0) * sortDir;
+    });
+  $('#count').textContent = `${list.length} / ${players.length}`;
+  const sel = location.hash.slice(1);
+  $('#rows').innerHTML = list.map((p) => `<tr data-id="${p.ids.wnba}" class="${p.ids.wnba === sel ? 'sel' : ''}">` +
+    COLS.map(([k, , g]) => {
+      if (k === 'thumb') return `<td>${showThumbs && p.headshotUrl ? `<img class="thumb" loading="lazy" src="${esc(p.headshotUrl)}">` : ''}</td>`;
+      const v = g(p);
+      if (k === 'issues') return `<td class="${v ? 'flag' : ''}">${v || ''}</td>`;
+      return `<td>${dash(v)}</td>`;
+    }).join('') + '</tr>').join('');
+}
+$('#rows').onclick = (e) => { const tr = e.target.closest('tr'); if (tr) location.hash = tr.dataset.id; };
+['#q', '#team', '#issues', '#thumbs'].forEach((s) => $(s).addEventListener('input', renderRows));
+
+function kv(obj) {
+  return '<table class="kv">' + Object.entries(obj).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${v}</td></tr>`).join('') + '</table>';
+}
+
+function renderDetail() {
+  const id = location.hash.slice(1);
+  const p = players.find((x) => x.ids.wnba === id);
+  document.querySelectorAll('#rows tr').forEach((tr) => tr.classList.toggle('sel', tr.dataset.id === id));
+  if (!p) { $('#right').innerHTML = '<p>select a player</p>'; return; }
+  const iss = issuesFor(p);
+  const slug = p.name.toLowerCase().replace(/[^a-z0-9]+/g, '_');
+  const seasons = Object.keys(p.stats).sort();
+  const statKeys = [...new Set(seasons.flatMap((s) => Object.keys(p.stats[s] ?? {})))];
+  $('#right').innerHTML = `
+    <h2>${esc(p.name)}</h2>
+    <div>${esc(p.id)} · ${p.teams.map((t) => `${t.season} ${esc(t.teamAbbr)}`).join(' → ')}</div>
+    ${iss.length ? `<div class="flag">⚠ ${iss.map(esc).join(' · ')}</div>` : ''}
+    <p><img class="big" src="${esc(p.headshotUrl)}" alt="no headshot"><br><a href="${esc(p.headshotUrl)}" target="_blank">${esc(p.headshotUrl)}</a></p>
+
+    <h3>ids</h3>
+    ${kv({
+      wnba: `${esc(p.ids.wnba)} — <a target="_blank" href="https://www.wnba.com/player/${esc(p.ids.wnba)}/${slug}">wnba.com</a>`,
+      wikidata: p.ids.wikidata ? `<a target="_blank" href="https://www.wikidata.org/wiki/${esc(p.ids.wikidata)}">${esc(p.ids.wikidata)}</a>` : dash(null),
+      bref: p.ids.bref ? `<a target="_blank" href="https://www.basketball-reference.com/wnba/players/${esc(p.ids.bref)}.html">${esc(p.ids.bref)}</a>` : dash(null),
+      espn: dash(p.ids.espn),
+    })}
+
+    <h3>bio</h3>
+    ${kv({
+      position: dash(p.bio.position),
+      height: dash(p.bio.height),
+      birthdate: `${dash(p.bio.birthdate)}${p.bio.birthdate ? ` (age ${age(p.bio.birthdate)})` : ''}`,
+      college: dash(p.bio.college),
+      country: dash(p.bio.country),
+      draft: p.bio.draft?.year ? `${p.bio.draft.year} · round ${p.bio.draft.round} · pick ${p.bio.draft.pick}` : dash(null),
+    })}
+
+    <h3>teams</h3>
+    <table><tr><th>season</th><th>abbr</th><th>teamId</th></tr>
+      ${p.teams.map((t) => `<tr><td>${esc(t.season)}</td><td>${esc(t.teamAbbr)}</td><td>${esc(t.teamId)}</td></tr>`).join('')}</table>
+
+    <h3>stats (per game)</h3>
+    <table class="stats"><tr><th>stat</th>${seasons.map((s) => `<th>${s}</th>`).join('')}</tr>
+      ${statKeys.map((k) => `<tr><td>${esc(k)}</td>${seasons.map((s) => `<td>${dash(p.stats[s]?.[k])}</td>`).join('')}</tr>`).join('')}</table>
+
+    <h3>awards (${p.awards.length})</h3>
+    ${p.awards.length ? '<table>' + [...p.awards].sort((a, b) => (a.year ?? 0) - (b.year ?? 0)).map((a) =>
+      `<tr><td>${dash(a.year)}</td><td>${esc(a.label)}</td><td><a target="_blank" href="https://www.wikidata.org/wiki/${esc(a.wikidataAward)}">${esc(a.wikidataAward)}</a></td></tr>`).join('') + '</table>' : '<p>none</p>'}
+
+    <h3>match</h3>
+    ${kv({ method: dash(p.match?.method), confidence: dash(p.match?.confidence), notes: dash(p.match?.notes) })}
+
+    <h3>sources (${p.sources.length})</h3>
+    <table>${p.sources.map((s) => `<tr><td>${esc(s.kind)}</td><td>${esc(s.retrievedAt)}</td><td><a target="_blank" href="${esc(s.url)}">link</a></td></tr>`).join('')}</table>
+
+    <h3>raw</h3>
+    <pre>${esc(JSON.stringify(p, null, 2))}</pre>`;
+  $('#right').scrollTop = 0;
+}
+window.addEventListener('hashchange', renderDetail);
+
+// keyboard: j/k or arrows to step through the current list
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+  const step = { j: 1, ArrowDown: 1, k: -1, ArrowUp: -1 }[e.key]; if (!step) return;
+  e.preventDefault();
+  const rows = [...document.querySelectorAll('#rows tr')];
+  const i = rows.findIndex((r) => r.dataset.id === location.hash.slice(1));
+  const next = rows[Math.max(0, Math.min(rows.length - 1, i + step))];
+  if (next) { location.hash = next.dataset.id; next.scrollIntoView({ block: 'nearest' }); }
+});
+
+function init(data) {
+  players = data;
+  const teams = [...new Set(players.map((p) => teamIn(p, '2026')).filter(Boolean))].sort();
+  $('#team').innerHTML = '<option value="">all teams (2026)</option>' + teams.map((t) => `<option>${t}</option>`).join('');
+  renderHead(); renderRows(); renderDetail();
+}
+
+async function load() {
+  try {
+    const res = await fetch('data/review/match-issues.json');
+    if (res.ok) {
+      const mi = await res.json();
+      for (const bucket of ['ambiguous', 'unmatched', 'lowConfidence', 'conflicts'])
+        for (const x of mi[bucket] ?? []) (issuesById[String(x.personId)] ??= []).push(`${bucket}: ${x.reason ?? x.issue ?? ''}`.trim());
+    }
+  } catch {}
+  try {
+    const res = await fetch('data/players.json');
+    if (!res.ok) throw new Error(res.status);
+    init(await res.json());
+  } catch {
+    $('#loader').hidden = false;
+  }
+}
+$('#file').onchange = async (e) => init(JSON.parse(await e.target.files[0].text()));
+load();
+</script>
+</body>
+</html>

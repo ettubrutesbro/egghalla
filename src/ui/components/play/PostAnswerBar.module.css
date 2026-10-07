@@ -1,0 +1,33 @@
+.bar { display: flex; align-items: center; gap: 10px; }
+
+.icon {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.down[aria-pressed='true'] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+.star[aria-pressed='true'] { border-color: var(--star); color: var(--star-ink); }
+
+.next {
+  margin-left: auto;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--surface);
+  font-size: 17px;
+  font-weight: 650;
+}

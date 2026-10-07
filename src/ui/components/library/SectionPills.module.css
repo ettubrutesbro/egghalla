@@ -1,0 +1,21 @@
+.pills {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  margin: 0 calc(var(--gutter) * -1);
+  padding: 0 var(--gutter);
+  scrollbar-width: none;
+}
+
+.pill {
+  flex: none;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.pill[aria-pressed='true'] { background: var(--ink); border-color: var(--ink); color: var(--surface); }

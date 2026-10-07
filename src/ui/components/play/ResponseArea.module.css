@@ -1,0 +1,7 @@
+.stub {
+  padding: 14px 16px;
+  border: 2px dashed var(--line);
+  border-radius: var(--radius-control);
+  font-size: 14px;
+  color: var(--ink-2);
+}

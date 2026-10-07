@@ -8,6 +8,7 @@ A mobile WNBA trivia app Jack is building for Mei Mei (a Golden State Valkyries 
 - `docs/framework.md`: how questions are modeled, scored, and served.
 - `docs/open-items.md`: what's unresolved. Check here before starting new work.
 - `src/schema/README.md`: the contract the UI renders against.
+- `docs/ui.md`: the app interface, its design history, `src/ui/` architecture, and open UI questions.
 
 ## Layout
 
@@ -17,6 +18,7 @@ A mobile WNBA trivia app Jack is building for Mei Mei (a Golden State Valkyries 
 | `public/data/` | Pulled data: `players.json`, raw envelopes, `REPORT.md` |
 | `public/explorer.html` | Browser explorer for the pulled player data |
 | `src/schema/` | Question schema, grading, difficulty, info mode, lints, scheduler |
+| `src/ui/` | The React app (Vite, strict TSX, CSS Modules), typed against `src/schema/` |
 | `src/schema/generators/` | Data-driven question generators (mismatch, fit, stat line) |
 | `src/schema/seed/` | Hand-authored seed questions, asset requests, `check.ts` |
 | `scripts/build-seed-explorer.ts` | Builds `public/seed-explorer.html` from the seed |
@@ -26,7 +28,8 @@ A mobile WNBA trivia app Jack is building for Mei Mei (a Golden State Valkyries 
 
 ```
 npm install
-npm run typecheck        # strict tsc over src/ and scripts/
+npm run dev              # the app; open #/states for every UI state side by side
+npm run typecheck        # strict tsc over src/schema, scripts/, and src/ui
 npm run check:seed       # lints, difficulty bands, asset checklist
 npm run build:explorer   # rebuild public/seed-explorer.html
 npm run pull             # re-run the data pull

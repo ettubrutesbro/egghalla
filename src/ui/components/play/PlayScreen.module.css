@@ -1,0 +1,14 @@
+.screen { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  animation: rise 0.28s var(--ease-out);
+}
+
+@keyframes rise { from { transform: translateY(24px); opacity: 0; } }
+
+.base { flex: 1; min-height: 0; display: flex; flex-direction: column; }

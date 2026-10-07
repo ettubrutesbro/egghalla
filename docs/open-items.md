@@ -34,4 +34,4 @@ Things the framework needs before it can run on real data. Remove an item when i
 
 ## Elsewhere
 
-- UI design happens in a separate thread. `src/schema/README.md` has the contract it needs.
+- UI: `docs/ui.md` covers the app in `src/ui/`, where it departs from `decisions.md`, and its open questions.

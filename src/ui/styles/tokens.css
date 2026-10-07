@@ -1,0 +1,33 @@
+:root {
+  --ink: #1b1a26;
+  --ink-2: #5e5b6e;
+  --line: #e4e1ec;
+  --field: #f2f1f6;
+  --surface: #ffffff;
+
+  --good: #127a50;
+  --good-bg: #e1f3ea;
+  --bad: #b7302a;
+  --bad-bg: #fbe5e2;
+  --star: #e0a100;
+  --star-ink: #b98500;
+
+  /* entity types: color is always paired with glyph shape + label */
+  --player-bg: #e3eafb;
+  --player-fg: #1f4fb8;
+  --team-bg: #ddf1ee;
+  --team-fg: #0f6e66;
+  --event-bg: #f1e6f8;
+  --event-fg: #7a3399;
+  --concept-bg: #fbefd6;
+  --concept-fg: #7a4f00;
+
+  --font: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --gutter: 24px;
+  --radius-control: 14px;
+  --radius-big: 18px;
+  --radius-panel: 16px;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

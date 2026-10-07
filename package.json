@@ -7,17 +7,28 @@
     "node": ">=18"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "pull:wikidata": "node scripts/pull-wikidata.mjs",
     "pull:wnba": "node scripts/pull-wnba.mjs",
     "build:players": "node scripts/build-players.mjs",
     "pull": "npm run pull:wikidata && npm run pull:wnba && npm run build:players",
-    "typecheck": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.app.json",
     "check:seed": "tsx src/schema/seed/check.ts",
     "build:explorer": "tsx scripts/build-seed-explorer.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
     "tsx": "^4.19.0",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.0",
+    "vite": "^8.3.3"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   }
 }

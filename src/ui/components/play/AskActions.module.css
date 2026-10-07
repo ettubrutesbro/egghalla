@@ -1,0 +1,20 @@
+.stack { display: flex; flex-direction: column; gap: 10px; }
+
+.big {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 22px;
+  border-radius: var(--radius-big);
+  font-size: 19px;
+  font-weight: 650;
+  text-align: left;
+  transition: transform 0.12s;
+}
+.big:active { transform: scale(0.98); }
+
+.primary { border: 0; background: var(--ink); color: var(--surface); }
+.secondary { border: 2px solid var(--ink); background: var(--surface); }
+
+.emoji { font-size: 30px; line-height: 1; }

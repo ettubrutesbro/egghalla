@@ -1,0 +1,34 @@
+.page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px var(--gutter) 0;
+  background: var(--surface);
+}
+
+.scroll { flex: 1; min-height: 0; overflow: auto; padding: 14px 0 32px; }
+
+.header { display: flex; flex-direction: column; gap: 6px; }
+.type { margin-top: 14px; }
+.player { color: var(--player-fg); }
+.team { color: var(--team-fg); }
+.event { color: var(--event-fg); }
+.concept { color: var(--concept-fg); }
+
+.sub { font-size: 16px; color: var(--ink-2); }
+
+.related { display: flex; flex-direction: column; gap: 8px; margin-top: 28px; }
+
+.facts {
+  margin: 20px 0 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  border-top: 1px solid var(--line);
+}
+.fact { display: contents; }
+.fact dt, .fact dd { margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+.fact dt { padding-right: 24px; color: var(--ink-2); }
+.fact dd { font-weight: 600; }
+.body { display: flex; flex-direction: column; gap: 12px; margin: 20px 0 0; font-size: 17px; line-height: 1.5; max-width: 60ch; }
+.body p { margin: 0; }

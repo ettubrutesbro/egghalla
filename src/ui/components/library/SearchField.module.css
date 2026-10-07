@@ -1,0 +1,22 @@
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: var(--radius-control);
+  background: var(--field);
+  color: var(--ink-2);
+  border: 2px solid transparent;
+}
+.field:focus-within { border-color: var(--ink); }
+
+.field input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: none;
+  font-size: 17px;
+  color: var(--ink);
+  outline: none;
+}

@@ -1,0 +1,34 @@
+.shell {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.content {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .shell { align-items: center; height: 100dvh; }
+  .shell .screen { width: 390px; height: min(844px, calc(100dvh - 48px)); box-shadow: 0 0 0 1px var(--line); }
+}
+
+/* states gallery: always a fixed frame */
+.framed { width: 390px; height: 844px; flex: none; }
+.framed .screen { max-width: none; box-shadow: 0 0 0 1px var(--line); padding-top: 0; }

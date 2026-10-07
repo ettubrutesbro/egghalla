@@ -1,0 +1,30 @@
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  text-align: left;
+}
+
+.row { width: 100%; flex: none; }
+
+.text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+
+.type {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.player { color: var(--player-fg); }
+.team { color: var(--team-fg); }
+.event { color: var(--event-fg); }
+.concept { color: var(--concept-fg); }
+
+.name { font-size: 16px; font-weight: 650; }
+.sub { font-size: 14px; color: var(--ink-2); }
+
+.chev { flex: none; color: var(--ink-2); }

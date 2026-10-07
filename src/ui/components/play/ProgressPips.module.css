@@ -1,0 +1,5 @@
+.pips { flex: none; display: flex; gap: 4px; padding: 18px var(--gutter) 0; }
+
+.pip { flex: 1; height: 4px; border-radius: 2px; background: rgb(27 26 38 / 0.12); transition: background 0.3s; }
+.pip[data-state='done'] { background: rgb(27 26 38 / 0.4); }
+.pip[data-state='current'] { background: var(--ink); }

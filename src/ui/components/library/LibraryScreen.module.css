@@ -1,0 +1,4 @@
+.screen { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.header { flex: none; display: flex; flex-direction: column; gap: 14px; padding: 28px var(--gutter) 14px; }
+.list { flex: 1; min-height: 0; overflow: auto; display: flex; flex-direction: column; gap: 8px; padding: 4px var(--gutter) 24px; }
+.empty { margin-top: 24px; text-align: center; color: var(--ink-2); }

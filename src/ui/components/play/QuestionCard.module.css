@@ -1,0 +1,11 @@
+.card {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px var(--gutter) 20px;
+}
+
+.stimulus { flex: none; display: flex; flex-direction: column; gap: 16px; }
+.middle { flex: 1; min-height: 0; overflow: auto; padding: 18px 0; }
+.controls { flex: none; display: flex; flex-direction: column; gap: 16px; }

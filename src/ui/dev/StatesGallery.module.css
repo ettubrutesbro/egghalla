@@ -1,0 +1,8 @@
+.gallery { min-height: 100dvh; padding: 32px 40px 64px; overflow-x: auto; }
+.note { margin: 0 0 24px; color: var(--ink-2); }
+.note a { color: var(--ink); }
+.row + .row { margin-top: 56px; }
+.rowTitle { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; }
+.frames { display: flex; gap: 40px; align-items: flex-start; }
+.frame { margin: 0; flex: none; }
+.caption { font-size: 14px; font-weight: 650; color: var(--ink-2); margin-bottom: 10px; }

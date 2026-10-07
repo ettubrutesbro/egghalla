@@ -1,0 +1,11 @@
+.plain {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  font-size: 16px;
+}
+.label { color: var(--ink-2); }
+.value { font-weight: 650; }

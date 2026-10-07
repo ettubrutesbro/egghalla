@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Egghalla seed explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1F5;--surface:#FFFFFF;--sunk:#F6F8FA;--ink:#18202B;--muted:#5D6878;--line:#D7DDE5;
+  --violet:#5B3FD6;--violet-soft:#ECE8FD;--court:#C9621C;--court-soft:#FCEBDD;
+  --ok:#23804F;--ok-soft:#E1F3E8;--bad:#B93A33;--bad-soft:#FBE6E4;--ph:#8A6BFF;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11151B;--surface:#1A2029;--sunk:#151A21;--ink:#E7EBF0;--muted:#98A3B3;--line:#2B3441;
+  --violet:#A391FF;--violet-soft:#2A2550;--court:#F0954F;--court-soft:#3A2618;
+  --ok:#5BC48B;--ok-soft:#173226;--bad:#F07B72;--bad-soft:#3A1C1A;--ph:#A391FF;}}
+:root[data-theme="dark"]{
+  --paper:#11151B;--surface:#1A2029;--sunk:#151A21;--ink:#E7EBF0;--muted:#98A3B3;--line:#2B3441;
+  --violet:#A391FF;--violet-soft:#2A2550;--court:#F0954F;--court-soft:#3A2618;
+  --ok:#5BC48B;--ok-soft:#173226;--bad:#F07B72;--bad-soft:#3A1C1A;--ph:#A391FF;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.5 var(--body)}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.app{display:grid;grid-template-columns:290px minmax(0,1fr);min-height:100%}
+aside{border-right:1px solid var(--line);background:var(--surface);padding:20px 14px 40px;overflow-y:auto;max-height:100vh;position:sticky;top:0}
+.brand{font:700 26px/1 var(--display);letter-spacing:.01em;margin:0 6px 4px}
+.brand-sub{color:var(--muted);font-size:13px;margin:0 6px 16px}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 6px 16px}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:3px 11px;font-size:13px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.group{margin:14px 0 4px}
+.group h3{font:600 15px/1.2 var(--display);color:var(--muted);margin:0 6px 4px;letter-spacing:.02em}
+.qbtn{display:flex;gap:9px;align-items:flex-start;width:100%;text-align:left;border:0;background:transparent;padding:7px 8px;border-radius:8px;font-size:14px;line-height:1.3}
+.qbtn:hover{background:var(--sunk)}
+.qbtn[aria-current="true"]{background:var(--violet-soft)}
+.dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px}
+.b-easy{background:var(--ok)}.b-medium{background:var(--court)}.b-hard{background:var(--bad)}
+.qbtn small{display:block;color:var(--muted);font-size:12px}
+.hold{flex:none;margin-left:auto;font-size:11px;color:var(--bad);border:1px solid currentColor;border-radius:4px;padding:0 4px}
+main{padding:24px clamp(16px,3vw,40px) 60px;min-width:0}
+.qhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;margin-bottom:6px}
+.qhead h1{font:700 34px/1.05 var(--display);margin:0;letter-spacing:.005em}
+.band{font:600 14px/1 var(--display);padding:5px 10px 4px;border-radius:4px;letter-spacing:.03em}
+.band.easy{background:var(--ok-soft);color:var(--ok)}.band.medium{background:var(--court-soft);color:var(--court)}.band.hard{background:var(--bad-soft);color:var(--bad)}
+.qid{color:var(--muted);font-size:13px;margin:0 0 18px;word-break:break-all}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tab{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:5px 12px;font-size:14px}
+.tab[aria-selected="true"]{border-color:var(--violet);color:var(--violet);background:var(--violet-soft)}
+.cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:28px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:18px 18px 20px;box-shadow:0 1px 0 var(--line)}
+.cardbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px}
+.cardbar .tpl{font:600 15px/1 var(--display);color:var(--violet);letter-spacing:.03em}
+.infobtn{border:1px solid var(--line);background:var(--sunk);border-radius:999px;padding:3px 12px;font-size:13px}
+.infobtn[aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:#fff}
+.infobtn[disabled]{opacity:.45;cursor:not-allowed}
+.block{margin:0 0 14px}
+.prompt{font:600 21px/1.25 var(--body);margin:0 0 14px}
+.ph{color:var(--ph);font-weight:500}
+.phbox{display:grid;place-items:center;text-align:center;border:2px dashed var(--ph);border-radius:14px;color:var(--ph);background:var(--violet-soft);padding:16px;font-weight:500;line-height:1.35}
+.phbox.photo{aspect-ratio:4/3}
+.phbox.portrait{aspect-ratio:1/1;max-width:180px;margin:0 auto}
+.thumb{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px dashed var(--ph);background:var(--violet-soft);display:grid;place-items:center;font-size:10px;color:var(--ph)}
+.ent{display:flex;gap:12px;align-items:center}
+.ent .phbox{width:84px;height:84px;padding:6px;font-size:12px;flex:none;aspect-ratio:auto}
+.ent h4{margin:0 0 2px;font:600 20px/1.1 var(--display)}
+.kv{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;color:var(--muted)}
+.cmp{width:100%;border-collapse:collapse;font-size:13px}
+.cmp th,.cmp td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.cmp th{font:600 13px/1.2 var(--display);color:var(--muted);letter-spacing:.02em}
+.cmp .hl{background:var(--court-soft)}
+.cmp .who{display:flex;gap:8px;align-items:center;font-weight:500}
+.scroll{overflow-x:auto}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.clues li{display:flex;justify-content:space-between;gap:10px;background:var(--sunk);border-radius:8px;padding:7px 10px;font-size:14px}
+.clues li span:last-child{color:var(--muted);font-size:12px}
+.clues .portrait-step{display:block}
+.box{width:100%;border-collapse:collapse;font-size:14px;text-align:center}
+.box th{font:600 13px/1 var(--display);color:var(--muted);padding:4px 2px}
+.box td{font:600 20px/1.1 var(--display);padding:4px 2px;border-top:1px solid var(--line)}
+.ctx{font-size:12px;color:var(--muted);margin-top:4px}
+.sb{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:var(--ink);color:var(--surface);border-radius:14px;padding:12px 16px;gap:8px}
+.sb .team{font:600 14px/1 var(--display);opacity:.75;letter-spacing:.04em}
+.sb .score{font:700 40px/1 var(--display)}
+.sb .mid{text-align:center}
+.sb .clock{font:700 26px/1 var(--display);color:var(--court)}
+.sb .meta{font-size:12px;opacity:.75}
+.sb .r{text-align:right}
+.concept{border-left:4px solid var(--violet);background:var(--violet-soft);padding:9px 12px;border-radius:0}
+.concept b{display:block;font:600 16px/1.2 var(--display)}
+.event{border-left:4px solid var(--court);background:var(--court-soft);padding:9px 12px;border-radius:0;font-size:14px}
+.court svg{width:100%;height:auto;display:block;background:var(--sunk);border-radius:12px}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-top:6px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:10px;align-items:center;text-align:left;width:100%;border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px;font-size:15px;line-height:1.3}
+.opt:hover{border-color:var(--muted)}
+.opt[aria-pressed="true"]{border-color:var(--violet);background:var(--violet-soft)}
+.opt.correct{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt .pair{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.opt .vs{color:var(--muted);font-size:12px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.grid2 .opt{flex-direction:column;text-align:center}
+.grid2 .opt .thumb{width:56px;height:56px;font-size:11px}
+.field{width:100%;border:1.5px solid var(--line);background:var(--sunk);border-radius:10px;padding:10px 12px;font-size:16px}
+.field.correct{border-color:var(--ok);background:var(--ok-soft)}.field.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.items{display:grid;gap:8px}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--sunk);border-radius:10px;padding:8px 10px}
+.item.textrow{grid-template-columns:64px minmax(0,1fr)}
+.item .lbl{font-weight:500}
+.item.textrow .lbl{font:700 20px/1 var(--display)}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:transparent;padding:5px 10px;font-size:13px;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.item.correct{outline:2px solid var(--ok)}.item.wrong{outline:2px solid var(--bad)}
+.sugg{border:1px solid var(--line);border-radius:10px;margin-top:6px;overflow:hidden}
+.sugg button{display:flex;gap:8px;align-items:center;width:100%;border:0;background:var(--surface);padding:8px 10px;text-align:left}
+.sugg button:hover{background:var(--sunk)}
+.hint{font-size:12px;color:var(--muted);margin-top:6px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
+.primary{border:0;background:var(--violet);color:#fff;border-radius:999px;padding:9px 20px;font-weight:600}
+.ghost{border:1px solid var(--line);background:transparent;border-radius:999px;padding:8px 14px;font-size:14px}
+.result{margin-top:12px;border-radius:12px;padding:10px 12px;font-weight:500}
+.result.good{background:var(--ok-soft);color:var(--ok)}.result.meh{background:var(--court-soft);color:var(--court)}.result.bad{background:var(--bad-soft);color:var(--bad)}
+.explain{margin-top:12px}
+.explain .lead{font:600 15px/1 var(--display);color:var(--muted);margin:0 0 6px;letter-spacing:.03em}
+.infopanel{margin-top:16px;border-top:1px dashed var(--line);padding-top:12px}
+.infot{width:100%;border-collapse:collapse;font-size:13px}
+.infot td{border-bottom:1px solid var(--line);padding:8px 6px;vertical-align:top}
+.infot td:first-child{width:34%;font-weight:600;color:var(--muted)}
+.hidden-banner{background:var(--bad-soft);color:var(--bad);border-radius:12px;padding:10px 12px;font-size:13px;margin-bottom:12px}
+.spec h2{font:700 22px/1 var(--display);margin:4px 0 10px}
+.spec table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:22px}
+.spec td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+.spec td:first-child{width:150px;color:var(--muted);font-weight:500}
+.tag{display:inline-block;background:var(--sunk);border:1px solid var(--line);border-radius:5px;padding:0 6px;margin:1px 3px 1px 0;font-size:13px}
+.tag.unknown{border-color:var(--court);color:var(--court)}
+.tag.mis{border-color:var(--bad);color:var(--bad)}
+.toggle-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;font-size:14px}
+.toggle-row label{display:flex;gap:6px;align-items:center;cursor:pointer}
+details{margin-top:8px}
+summary{cursor:pointer;color:var(--muted);font-size:14px}
+pre{background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-size:12px;line-height:1.45;max-height:420px}
+.themebtn{border:1px solid var(--line);background:transparent;border-radius:999px;padding:3px 11px;font-size:13px;margin:0 6px 14px}
+@media (max-width:980px){.cols{grid-template-columns:minmax(0,1fr)}.card{max-width:440px}}
+@media (max-width:720px){.app{grid-template-columns:minmax(0,1fr)}aside{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--line)}.qlist{max-height:300px;overflow-y:auto}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <p class="brand">Egghalla seed</p>
+    <p class="brand-sub" id="count"></p>
+    <button class="themebtn" id="theme">Toggle dark mode</button>
+    <div class="filters" id="filters"></div>
+    <div class="qlist" id="qlist"></div>
+  </aside>
+  <main id="main"></main>
+</div>
+<script>
+const DATA=/*DATA*/null;
+const Q=DATA.questions;
+const ORDER=["reveal","recall","define","apply","setSelect","mismatch","connection","scenario","read"];
+const TPL={reveal:"Progressive reveal",recall:"Recall",define:"Define",apply:"Apply",setSelect:"Set selection",mismatch:"Mismatch",connection:"Connection",scenario:"Scenario",read:"Read"};
+const TEAMS={aces:"Las Vegas Aces",fever:"Indiana Fever",liberty:"New York Liberty",lynx:"Minnesota Lynx",sky:"Chicago Sky",valkyries:"Golden State Valkyries",dream:"Atlanta Dream",wings:"Dallas Wings",mercury:"Phoenix Mercury",tempo:"Toronto Tempo",fire:"Portland Fire"};
+const NAMES={"aja-wilson":"A'ja Wilson","janelle-salaun":"Janelle Salaün"};
+const FIELD={name:"Name",team:"Team",position:"Pos",height:"Ht",jersey:"#",college:"College",draft:"Draft",conference:"Conf",allStar:"All-Star",accolades:"Accolades",ppg:"PPG",rpg:"RPG",apg:"APG",spg:"SPG",bpg:"BPG",tovPg:"TOV",fgPct:"FG%",threePct:"3P%",ftPct:"FT%",tpaPg:"3PA"};
+const FIELD_LONG={college:"college",draft:"draft year and pick",position:"listed position",jersey:"jersey number",team:"team",height:"height"};
+const S={q:0,p:0,band:"all",answers:false,info:false,mode:"primary",follow:false,sel:{},clues:1,graded:null,self:null};
+
+const esc=s=>String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const title=id=>id.split("-").map(w=>w[0].toUpperCase()+w.slice(1)).join(" ");
+function refName(r){if(!r)return"";if(r.kind==="team")return TEAMS[r.id]||title(r.id);if(r.kind==="concept")return DATA.concepts[r.id]?.label||r.id;if(r.kind==="event")return DATA.events[r.id]?.title||r.id;return NAMES[r.id]||title(r.id)}
+const ph=t=>`<span class="ph">[${esc(t)}]</span>`;
+const norm=s=>String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
+const accepts=(v,a)=>[a.canonical,...(a.also||[])].some(x=>norm(x)===norm(v));
+const thumb=r=>`<span class="thumb" aria-hidden="true">${r.kind==="team"?"logo":"photo"}</span>`;
+
+function cur(){const q=Q[S.q];let p=q.presentations[S.p];if(S.follow&&p.followUp)p={...p.followUp,builtInfo:[],servable:true,isFollow:true};return{q,p}}
+function reset(){S.mode="primary";S.follow=false;S.sel={};S.clues=1;S.graded=null;S.self=null;S.selfOpen=false;S.info=false}
+
+// ─── Blocks ───
+function fmtClock(s){return `${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`}
+function shotSvg(shots){
+  const yc=5.25+Math.sqrt(22.15**2-22**2);
+  const dots=shots.map(s=>s.made
+    ?`<circle cx="${s.x}" cy="${s.y}" r=".75" fill="var(--violet)"/>`
+    :`<g stroke="var(--court)" stroke-width=".35"><line x1="${s.x-.6}" y1="${s.y-.6}" x2="${s.x+.6}" y2="${s.y+.6}"/><line x1="${s.x-.6}" y1="${s.y+.6}" x2="${s.x+.6}" y2="${s.y-.6}"/></g>`).join("");
+  return `<svg viewBox="-1 -1 52 34" role="img" aria-label="Half-court shot chart: ${shots.filter(s=>s.made).length} makes of ${shots.length} shots"><g fill="none" stroke="var(--line)" stroke-width=".3">
+  <rect x="0" y="0" width="50" height="47"/><rect x="17" y="0" width="16" height="19"/><circle cx="25" cy="19" r="6"/>
+  <path d="M3 0 L3 ${yc} A22.15 22.15 0 0 0 47 ${yc} L47 0"/><path d="M21 5.25 A4 4 0 0 0 29 5.25"/><line x1="22" y1="4" x2="28" y2="4"/></g>
+  <circle cx="25" cy="5.25" r=".75" fill="none" stroke="var(--muted)" stroke-width=".3"/>${dots}</svg>`;
+}
+function block(b,q,opts={}){
+  switch(b.type){
+    case"prompt":return `<p class="prompt">${esc(b.text).replace(/\{focus\}/g,ph("focus cue"))}</p>`;
+    case"entity":return `<div class="block ent"><div class="phbox">[portrait of ${esc(refName(b.ref))}]</div><div><h4>${b.show.includes("name")?esc(refName(b.ref)):ph("name")}</h4><div class="kv">${b.show.filter(f=>f!=="name").map(f=>`<span>${FIELD[f]}: ${ph(f)}</span>`).join("")}${b.season?`<span>${b.season}</span>`:""}</div></div></div>`;
+    case"comparison":{const hl=b.highlight||[];const fields=b.fields.filter(f=>f!=="name");
+      return `<div class="block scroll"><table class="cmp"><thead><tr><th>Player</th>${fields.map(f=>`<th class="${hl.includes(f)?"hl":""}">${FIELD[f]}</th>`).join("")}</tr></thead><tbody>${b.subjects.map(s=>`<tr><td><span class="who">${thumb(s)}${esc(refName(s))}</span></td>${fields.map(f=>`<td class="${hl.includes(f)?"hl":""}">${ph(FIELD[f])}</td>`).join("")}</tr>`).join("")}</tbody></table>${b.season?`<div class="ctx">${b.season} season</div>`:""}</div>`}
+    case"clueSequence":{const shown=b.steps.slice(0,S.answers?b.steps.length:S.clues);
+      const more=!S.answers&&S.clues<b.steps.length;
+      return `<div class="block"><ol class="clues">${shown.map(c=>c.portrait?`<li class="portrait-step"><div class="phbox portrait">[portrait]</div></li>`:`<li><span><b>${esc(FIELD_LONG[c.field]||c.field||"clue")}:</b> ${c.text?esc(c.text):ph(c.field)}</span><span>${c.points} pts</span></li>`).join("")}</ol>${more?`<div class="actions"><button class="ghost" data-a="clue">Next clue</button><span class="hint">${b.steps.length-S.clues} left</span></div>`:""}</div>`}
+    case"list":return "";// rendered by its response
+    case"statLine":{const l=b.line;return `<div class="block scroll"><table class="box"><thead><tr><th>MIN</th><th>PTS</th><th>REB</th><th>AST</th><th>TOV</th><th>FG</th><th>3P</th><th>FT</th></tr></thead><tbody><tr><td>${l.min}</td><td>${l.pts}</td><td>${l.reb}</td><td>${l.ast}</td><td>${l.tov}</td><td>${l.fgm}-${l.fga}</td><td>${l.tpm}-${l.tpa}</td><td>${l.ftm}-${l.fta}</td></tr></tbody></table><div class="ctx">${b.ref?esc(refName(b.ref)):"Hypothetical player"}${b.context?" · "+esc(b.context):""}</div></div>`}
+    case"shotChart":return `<div class="block court">${shotSvg(b.shots)}<div class="legend"><span><svg width="10" height="10"><circle cx="5" cy="5" r="4" fill="var(--violet)"/></svg> Make</span><span style="color:var(--court)">✕ Miss</span>${b.context?`<span>${esc(b.context)}</span>`:""}</div></div>`;
+    case"scoreboard":{const s=b.state;return `<div class="block sb"><div><div class="team">Us</div><div class="score">${s.score.us}</div></div><div class="mid"><div class="meta">${s.period==="OT"?"OT":"Q"+s.period}</div><div class="clock">${fmtClock(s.gameClockSec)}</div><div class="meta">Shot clock ${s.shotClockSec==null?"off":s.shotClockSec}</div><div class="meta">${s.possession==="us"?"◀ Our ball":"Their ball ▶"}${s.timeoutsLeft!=null?` · ${s.timeoutsLeft} TO`:""}</div></div><div class="r"><div class="team">Them</div><div class="score">${s.score.them}</div></div></div>`}
+    case"concept":{const c=DATA.concepts[b.ref.id];return `<div class="block concept"><b>${esc(c?.label||b.ref.id)}</b>${b.facet==="term"?"":esc(c?.gloss||"")}</div>`}
+    case"event":{const e=DATA.events[b.ref.id];return `<div class="block event">${b.show.includes("date")?`<b>${esc(e?.date)}</b> · `:""}${esc(e?.title||b.ref.id)}</div>`}
+    case"media":{const a=DATA.assets[b.assetId];return `<div class="block phbox photo">[photo: ${esc(a?.request?.depicts||b.alt)}]</div>`}
+    case"benchmark":return `<span>${ph(`league avg ${FIELD[b.stat]||b.stat} · ${b.season}`)}</span>`;
+  }
+  return `<div class="block">${ph(b.type)}</div>`;
+}
+
+// ─── Responses ───
+function optInner(o){if(o.refs){if(o.refs.length===2)return `<span class="pair">${thumb(o.refs[0])}<b>${esc(refName(o.refs[0]))}</b><span class="vs">ball · guarded by</span>${thumb(o.refs[1])}${esc(refName(o.refs[1]))}</span>`;return `${thumb(o.refs[0])}<span>${esc(refName(o.refs[0]))}</span>`}return esc(o.label)}
+function listItems(p,id){const b=p.stimulus.find(x=>x.id===id);return b?b.items:[]}
+function poolNames(kind){
+  const ids=new Set();
+  Q.forEach(q=>JSON.stringify(q).replace(new RegExp(`"kind":"${kind}","id":"([a-z0-9-]+)"`,"g"),(_,id)=>ids.add(id)));
+  if(kind==="player")Q.forEach(q=>q.presentations.forEach(p=>[p.response.primary,p.response.fallback].forEach(r=>r&&r.kind==="entityPick"&&r.pool==="player"&&ids.add(r.answer))));
+  if(kind==="team")Object.keys(TEAMS).forEach(t=>ids.add(t));
+  return [...ids].map(id=>({id,name:refName({kind,id})}));
+}
+function response(r,p){
+  const G=S.graded,A=S.answers;
+  const mark=(ok)=>G||A?(ok?"correct":"wrong"):"";
+  switch(r.kind){
+    case"text":{const v=S.sel.text||"";const cls=G?(G.perfect?"correct":"wrong"):"";
+      return `<input class="field ${cls}" data-in="text" value="${esc(v)}" placeholder="Type your answer" aria-label="Answer">${A?`<div class="hint">Accepts: ${esc([r.answer.canonical,...(r.answer.also||[])].join(", "))}</div>`:""}`}
+    case"number":return `<input class="field ${G?(G.perfect?"correct":"wrong"):""}" type="number" inputmode="decimal" data-in="text" value="${esc(S.sel.text||"")}" placeholder="Number${r.unit?" ("+r.unit+")":""}" aria-label="Answer">${A?`<div class="hint">Answer: ${r.answer}${r.unit?" "+r.unit:""}${r.tolerance?" ± "+r.tolerance:""}</div>`:""}`;
+    case"entityPick":{const v=S.sel.text||"";const pool=poolNames(r.pool);const sug=v.length>=r.minChars&&!S.sel.pick?pool.filter(x=>norm(x.name).includes(norm(v))).slice(0,5):[];
+      return `<input class="field ${G?(G.perfect?"correct":"wrong"):""}" data-in="pick" value="${esc(S.sel.pick?refName({kind:r.pool,id:S.sel.pick}):v)}" placeholder="Start typing a ${r.pool} name" aria-label="Answer" autocomplete="off">${sug.length?`<div class="sugg">${sug.map(x=>`<button data-a="pick" data-id="${x.id}">${thumb({kind:r.pool})}${esc(x.name)}</button>`).join("")}</div>`:""}<div class="hint">Suggestions appear after ${r.minChars} letters${A?` · answer: ${esc(refName({kind:r.pool,id:r.answer}))}`:""}</div>`}
+    case"choice":{const grid=r.options.every(o=>o.refs&&o.refs.length===1);
+      return `<div class="opts ${grid?"grid2":""}">${r.options.map(o=>{const on=S.sel.choice===o.id;const c=(G||A)?(o.id===r.answer?"correct":on?"wrong":""):"";return `<button class="opt ${c}" aria-pressed="${on}" data-a="choice" data-id="${o.id}">${optInner(o)}</button>`}).join("")}</div>`}
+    case"multi":{const sel=S.sel.multi||[];return `<div class="opts grid2">${r.options.map(o=>{const on=sel.includes(o.id);const ok=r.answer.includes(o.id);const c=(G||A)?(ok?"correct":on?"wrong":""):"";return `<button class="opt ${c}" aria-pressed="${on}" data-a="multi" data-id="${o.id}">${optInner(o)}</button>`}).join("")}</div><div class="hint">Select all that apply</div>`}
+    case"perItemText":{const items=listItems(p,r.listId);const vals=S.sel.items||{};
+      return `<div class="items">${items.map(it=>{const a=r.answers[it.id];const ok=a&&accepts(vals[it.id]||"",a);return `<div class="item textrow"><span class="lbl">${esc(it.label)}</span><input class="field ${G?(ok?"correct":"wrong"):""}" data-in="item" data-id="${it.id}" value="${esc(vals[it.id]||"")}" placeholder="${A?esc(a.canonical):"Stands for…"}" aria-label="${esc(it.label)}"></div>`}).join("")}</div>`}
+    case"perItemToggle":{const items=listItems(p,r.listId);const vals=S.sel.items||{};
+      return `<div class="items">${items.map(it=>{const v=vals[it.id];const ans=r.answers[it.id];const c=G?(v===ans?"correct":"wrong"):"";return `<div class="item ${c}"><span class="lbl">${esc(it.label)}</span><span class="seg">${[0,1].map(n=>`<button aria-pressed="${A?ans===n:v===n}" data-a="toggle" data-id="${it.id}" data-v="${n}">${esc(r.labels[n])}</button>`).join("")}</span></div>`}).join("")}</div>`}
+    case"match":{const vals=S.sel.items||{};return `<div class="items">${r.left.map(l=>{const v=A?r.pairs[l.id]:vals[l.id]||"";const c=G?(v===r.pairs[l.id]?"correct":"wrong"):"";return `<div class="item textrow ${c}"><span class="lbl">${esc(l.label)}</span><select class="field" data-in="match" data-id="${l.id}" aria-label="${esc(l.label)}"><option value="">Choose…</option>${r.right.map(o=>`<option value="${o.id}" ${v===o.id?"selected":""}>${esc(o.label)}</option>`).join("")}</select></div>`}).join("")}</div>`}
+    case"selfGrade":return S.selfOpen||A?`<div class="hint">Canonical answer</div>${r.canonical.map(b=>block(b)).join("")}${A||S.self?"":`<div class="actions"><span>How did you do?</span>${["got","close","missed"].map(v=>`<button class="ghost" data-a="self" data-v="${v}">${v==="got"?"Got it":v==="close"?"Close":"Missed"}</button>`).join("")}</div>`}`:`<textarea class="field" rows="3" placeholder="Explain it in your own words" aria-label="Your answer"></textarea><div class="actions"><button class="primary" data-a="reveal-self">Show answer</button></div>`;
+  }
+  return ph(r.kind);
+}
+function grade(r){
+  const one=ok=>({score:ok?1:0,perfect:ok});const sel=S.sel;
+  switch(r.kind){
+    case"text":return one(accepts(sel.text||"",r.answer));
+    case"number":return one(Math.abs(Number(sel.text)-r.answer)<=(r.tolerance||0));
+    case"entityPick":return one(sel.pick===r.answer);
+    case"choice":return one(sel.choice===r.answer);
+    case"multi":{const s=new Set(sel.multi||[]);let h=0;s.forEach(x=>r.answer.includes(x)&&h++);const fa=s.size-h;return{score:Math.max(0,(h-fa)/r.answer.length),perfect:h===r.answer.length&&fa===0}}
+    case"perItemText":{const ids=Object.keys(r.answers);const h=ids.filter(id=>accepts((sel.items||{})[id]||"",r.answers[id])).length;return{score:h/ids.length,perfect:h===ids.length}}
+    case"perItemToggle":{const ids=Object.keys(r.answers);const h=ids.filter(id=>(sel.items||{})[id]===r.answers[id]).length;return{score:h/ids.length,perfect:h===ids.length}}
+    case"match":{const ids=Object.keys(r.pairs);const h=ids.filter(id=>(sel.items||{})[id]===r.pairs[id]).length;return{score:h/ids.length,perfect:h===ids.length}}
+  }
+  return one(false);
+}
+function resultMsg(g){if(g.perfect)return`<div class="result good">Correct</div>`;if(g.score>0)return`<div class="result meh">Partly right · ${Math.round(g.score*100)}%</div>`;return`<div class="result bad">Not quite</div>`}
+
+// ─── Render ───
+function renderList(){
+  const bands=["all","easy","medium","hard"];
+  document.getElementById("filters").innerHTML=bands.map(b=>`<button class="chip" aria-pressed="${S.band===b}" data-a="band" data-v="${b}">${b==="all"?"All":b[0].toUpperCase()+b.slice(1)}</button>`).join("");
+  const held=q=>q.presentations.every(p=>!p.servable);
+  document.getElementById("count").textContent=`${Q.length} questions · ${Q.reduce((n,q)=>n+q.presentations.length,0)} presentations`;
+  document.getElementById("qlist").innerHTML=ORDER.map(t=>{const qs=Q.map((q,i)=>({q,i})).filter(x=>x.q.template===t&&(S.band==="all"||x.q.difficulty.band===S.band));
+    if(!qs.length)return"";return `<div class="group"><h3>${TPL[t]}</h3>${qs.map(({q,i})=>`<button class="qbtn" aria-current="${i===S.q}" data-a="q" data-i="${i}"><span class="dot b-${q.difficulty.band}"></span><span>${esc(shortTitle(q))}<small>${esc(q.presentations.map(p=>p.variant).join(", "))}</small></span>${held(q)?`<span class="hold">held</span>`:""}</button>`).join("")}</div>`}).join("");
+}
+function shortTitle(q){const p=q.presentations[0];const pr=p.stimulus.find(b=>b.type==="prompt");let t=pr?pr.text.replace("{focus}","[focus]"):q.id;if(q.template==="reveal")t="Who is she? ("+refName(p.stimulus.find(b=>b.type==="clueSequence").subject)+")";if(q.template==="connection")t="Connect "+p.stimulus.find(b=>b.type==="comparison").subjects.map(refName).join(" + ");return t.length>70?t.slice(0,68)+"…":t}
+function tags(arr,cls=x=>""){return arr.length?arr.map(x=>`<span class="tag ${cls(x)}">${esc(x)}</span>`).join(""):`<span style="color:var(--muted)">—</span>`}
+function renderMain(){
+  const {q,p}=cur();const d=q.difficulty;const r=S.mode==="fallback"&&p.response.fallback?p.response.fallback:p.response.primary;
+  const known=new Set(DATA.known);
+  const info=p.builtInfo||[];
+  const infoOff=TPL[q.template]&&["reveal","recall","setSelect"].includes(q.template);
+  const sub=[q.facet&&`facet ${q.facet}`,q.polarity&&`polarity ${q.polarity}`,q.applyMode&&`mode ${q.applyMode}`].filter(Boolean).join(" · ");
+  const asset=p.stimulus.filter(b=>b.type==="media").map(b=>DATA.assets[b.assetId]).filter(Boolean);
+  const misc=[...(p.response.primary.options||[]),...(p.response.fallback?.options||[])].filter(o=>o.misconception);
+  const explain=(S.graded||S.answers||S.self)&&p.explain?.length?`<div class="explain"><p class="lead">Why</p>${p.explain.map(b=>block(b,q)).join("")}</div>`:"";
+  const follow=(S.graded||S.answers||S.self)&&q.presentations[S.p].followUp&&!S.follow?`<button class="ghost" data-a="follow">Follow-up question</button>`:"";
+  const canFallback=p.response.fallback&&S.mode==="primary"&&!S.graded;
+  const checkable=!["selfGrade"].includes(r.kind);
+  document.getElementById("main").innerHTML=`
+  <div class="qhead"><h1>${esc(TPL[q.template])}${sub?` <span style="font-weight:500;color:var(--muted);font-size:20px">${esc(sub)}</span>`:""}</h1><span class="band ${d.band}">${d.band[0].toUpperCase()+d.band.slice(1)} · ${d.score}</span></div>
+  <p class="qid">${esc(q.id)}${q.verified===false?" · unverified":""}</p>
+  <div class="tabs" role="tablist">${q.presentations.map((pp,i)=>`<button class="tab" role="tab" aria-selected="${i===S.p&&!S.follow}" data-a="p" data-i="${i}">${esc(pp.variant)}${pp.servable?"":" (held)"}</button>`).join("")}${S.follow?`<button class="tab" role="tab" aria-selected="true">${esc(p.variant)}</button>`:""}</div>
+  <div class="toggle-row"><label><input type="checkbox" data-a="answers" ${S.answers?"checked":""}> Show answer key</label><button class="ghost" data-a="reset">Reset card</button></div>
+  <div class="cols">
+    <div>
+      ${p.servable===false?`<div class="hidden-banner">Held from the deck until this photo is provided: ${esc(asset.map(a=>a.path).join(", "))}</div>`:""}
+      <div class="card">
+        <div class="cardbar"><span class="tpl">${esc(TPL[q.template])}</span><button class="infobtn" data-a="info" aria-pressed="${S.info}" ${info.length?"":"disabled"} title="${info.length?"Context for this question":infoOff?"Info is off for this template":"No context rows"}">Info</button></div>
+        ${p.stimulus.map(b=>block(b,q)).join("")}
+        ${response(r,p)}
+        ${!S.graded&&checkable&&!S.answers?`<div class="actions"><button class="primary" data-a="check">Check</button>${canFallback?`<button class="ghost" data-a="fallback">Show choices</button>`:""}</div>`:""}
+        ${S.graded?resultMsg(S.graded):""}
+        ${S.self?resultMsg(S.self):""}
+        ${explain}
+        ${follow?`<div class="actions">${follow}</div>`:""}
+        ${S.info&&info.length?`<div class="infopanel"><table class="infot">${info.map(row=>`<tr><td>${esc(row.label)}</td><td>${block(row.block,q)}</td></tr>`).join("")}</table></div>`:""}
+      </div>
+    </div>
+    <div class="spec">
+      <h2>Schema</h2>
+      <table>
+        <tr><td>Tests</td><td>${tags(q.tests)}</td></tr>
+        <tr><td>Assumes</td><td>${tags(q.assumes,x=>known.has(x)?"":"unknown")}${q.assumes.some(x=>!known.has(x))?`<div class="hint">Orange: not yet known at the start, so definitions appear in Info</div>`:""}</td></tr>
+        <tr><td>Edges</td><td>${tags(q.edges)}</td></tr>
+        <tr><td>Tested fields</td><td>${tags(q.testsFields)}</td></tr>
+        <tr><td>Difficulty</td><td>obscurity ${d.breakdown.obscurity} + combo ${d.breakdown.combo} + dated ${d.breakdown.dated} + unfamiliar ${d.breakdown.unfamiliar} − favorite ${d.breakdown.favorite} = <b>${d.score}</b></td></tr>
+        <tr><td>Response</td><td>${esc(p.response.primary.kind)}${p.response.fallback?` → fallback ${esc(p.response.fallback.kind)}`:""}</td></tr>
+        <tr><td>Stimulus</td><td>${tags(p.stimulus.map(b=>b.type))}</td></tr>
+        <tr><td>Info rows</td><td>${info.length?tags(info.map(i=>i.label)):infoOff?"Off for this template":"None"}</td></tr>
+        ${misc.length?`<tr><td>Misconceptions</td><td>${misc.map(o=>`<span class="tag mis">${esc(o.label||o.id)} → ${esc(o.misconception)}</span>`).join("")}</td></tr>`:""}
+        ${asset.length?`<tr><td>Asset</td><td>${asset.map(a=>`<b>${esc(a.status)}</b> · ${esc(a.path)}<div class="hint">Shows: ${esc(a.request.depicts)}${a.request.avoid?`<br>Avoid: ${esc(a.request.avoid.join(", "))}`:""}</div>`).join("")}</td></tr>`:""}
+      </table>
+      <details><summary>Raw JSON</summary><pre>${esc(JSON.stringify(q,(k,v)=>k==="builtInfo"||k==="servable"||k==="difficulty"?undefined:v,2))}</pre></details>
+    </div>
+  </div>`;
+}
+function render(){renderList();renderMain()}
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-a]");if(!t)return;const a=t.dataset.a;const {p}=cur();
+  const r=S.mode==="fallback"&&p.response.fallback?p.response.fallback:p.response.primary;
+  if(a==="q"){S.q=+t.dataset.i;S.p=0;reset();render();document.getElementById("main").scrollIntoView?.({block:"start"});return}
+  if(a==="band"){S.band=t.dataset.v;renderList();return}
+  if(a==="p"){S.p=+t.dataset.i;reset();renderMain();return}
+  if(a==="answers"){S.answers=t.checked;renderMain();return}
+  if(a==="reset"){reset();renderMain();return}
+  if(a==="info"){S.info=!S.info;renderMain();return}
+  if(a==="clue"){S.clues++;renderMain();return}
+  if(a==="fallback"){S.mode="fallback";S.sel={};renderMain();return}
+  if(a==="follow"){S.follow=true;S.mode="primary";S.sel={};S.graded=null;S.self=null;S.selfOpen=false;S.info=false;renderMain();return}
+  if(S.graded)return;
+  if(a==="choice"){S.sel.choice=t.dataset.id;renderMain();return}
+  if(a==="multi"){const m=new Set(S.sel.multi||[]);m.has(t.dataset.id)?m.delete(t.dataset.id):m.add(t.dataset.id);S.sel.multi=[...m];renderMain();return}
+  if(a==="toggle"){S.sel.items={...(S.sel.items||{}),[t.dataset.id]:+t.dataset.v};renderMain();return}
+  if(a==="pick"){S.sel.pick=t.dataset.id;renderMain();return}
+  if(a==="reveal-self"){S.selfOpen=true;renderMain();return}
+  if(a==="self"){const v=t.dataset.v;S.self={score:v==="got"?1:v==="close"?.5:0,perfect:v==="got"};renderMain();return}
+  if(a==="check"){S.graded=grade(r);renderMain();return}
+});
+document.addEventListener("input",e=>{
+  const t=e.target;if(S.graded)return;
+  if(t.dataset.in==="text"){S.sel.text=t.value;return}
+  if(t.dataset.in==="pick"){S.sel.text=t.value;S.sel.pick=null;const pos=t.selectionStart;renderMain();const n=document.querySelector('[data-in="pick"]');n.focus();n.setSelectionRange(pos,pos);return}
+  if(t.dataset.in==="item"){S.sel.items={...(S.sel.items||{}),[t.dataset.id]:t.value};return}
+});
+document.addEventListener("change",e=>{const t=e.target;if(t.dataset.in==="match"){S.sel.items={...(S.sel.items||{}),[t.dataset.id]:t.value};}});
+document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.matches("input.field")){const b=document.querySelector('[data-a="check"]');b&&b.click()}});
+document.getElementById("theme").addEventListener("click",()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=dark?"light":"dark"});
+render();
+</script>
+</body>
+</html>

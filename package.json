@@ -3,11 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "pull:wikidata": "node scripts/pull-wikidata.mjs",
     "pull:wnba": "node scripts/pull-wnba.mjs",
     "build:players": "node scripts/build-players.mjs",
-    "pull": "npm run pull:wikidata && npm run pull:wnba && npm run build:players"
+    "pull": "npm run pull:wikidata && npm run pull:wnba && npm run build:players",
+    "typecheck": "tsc -p tsconfig.json",
+    "check:seed": "tsx src/schema/seed/check.ts",
+    "build:explorer": "tsx scripts/build-seed-explorer.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0"
   }
 }
